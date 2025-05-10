@@ -12,7 +12,7 @@ module.exports = {
         "custom-light": "0px 4px 25px -1px rgba(0, 0, 0, 0.20)",
       },
       colors: {
-        primary: "#19B071",
+        primary: "#F9A61A",
         textMain: "#02050A",
         textBody: "#888AA0",
       },
