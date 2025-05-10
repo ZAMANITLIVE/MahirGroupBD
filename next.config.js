@@ -11,23 +11,21 @@ const nextConfig = {
       //     ? "http://192.168.0.178:5000/"
       //     : "http://192.168.0.178:5000/",
     },
-    images: {
+
+      images: {
       remotePatterns: [
         {
           protocol: "https",
-          hostname: "appstick.s3.ap-southeast-1.amazonaws.com",
+          hostname: "*",
         },
         {
           protocol: "http",
-          hostname: "192.168.0.178",
-        },
-        {
-          protocol: "http",
-          hostname: "localhost",
-        },
+          hostname: "*",
+        }
       ],
     },
   };
+  
   
   module.exports = nextConfig;
   
