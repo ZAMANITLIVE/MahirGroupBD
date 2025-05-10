@@ -4,9 +4,9 @@ import Providers from "./provider/userProvider";
 import "./styles/globals.scss";
 
 export const metadata = {
-  title: "Agencistick",
+  title: "Mahir Group BD",
   description:
-    "A dynamic agency offering innovative solutions to meet your business needs.",
+    "Delivering excellence in garment accessories with quality and innovation.",
 };
 
 export default function RootLayout({ children }) {
