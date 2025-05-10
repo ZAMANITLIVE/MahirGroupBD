@@ -79,7 +79,7 @@ const Footer4 = () => {
                      height={44}
                   />
                   {/* <p className="description-2 !font-normal mt-4 text-[#525F7A] md:max-w-[302px]">{setting?.site_description}</p> */}
-                  <p className="description-2 !font-normal mt-4 text-[#525F7A] md:max-w-[302px]">Cras at luctus nisl. Donec euismtirus tortor eu justo gravida finibus lectus.</p>
+                  <p className="description-2 !font-normal mt-4 text-[#525F7A] md:max-w-[302px]">The Mahir Group is a leading manufacturer of garments accessories in Bangladesh, with a strong reputation for quality and excellence. It’s started business from 2003. Our group of companies includes 10 (Ten) sister concerns, each of which is dedicated to providing the best products and services to our customers.</p>
                   <div className="xl:mt-7 lg:mt-6 md:mt-5 mt-4">
                      <form
                         className="w-full md:max-w-[302px]"
