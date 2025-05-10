@@ -8,7 +8,7 @@ import ProductCard4 from "../site/common/card/productCard4";
 import Link from "next/link";
 
 const Product4 = () => {
-   const [data] = useFetch(getPublicProjects, { limit: 3 });
+   const [data] = useFetch(getPublicProjects, { limit: 9 });
    const i18n = useI18n();
    return (
       <div className="agency-container">
