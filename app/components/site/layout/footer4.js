@@ -153,7 +153,7 @@ const Footer4 = () => {
             <div className="xl:my-7 lg:my-6 md:my-5 my-4 flex flex-col sm:flex-row items-center justify-between ">
                <p className="text-[#888AA0] description-2 mt-3 sm:mt-0">
                   Copyright © {currentYear || new Date().getFullYear()} All rights
-                  reserved <Link className="text-primary" href="/">Agencistick</Link>
+                  reserved | Developed By <Link className="text-primary" href="www/zaman-it.com">ZAMAN IT</Link>
                </p>
                <div className="flex gap-2 sm:gap-[13px] justify-center mt-3 sm:mt-0">
                   {navIcons.map((item, index) => {
