@@ -220,7 +220,7 @@ const Navbar = ({
             {itemsMunu}
           </div>
 
-          {/* languyage */}
+          {/* languyage
           <div
             className={`flex items-center gap-x-1 sm:gap-x-1 ml-2 mr-0 sm:mr-5 ${
               textColor == "text-textMain"
@@ -260,7 +260,7 @@ const Navbar = ({
                 />
               </div>
             )}
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-1 sm:gap-3 relative !z-50">
             {user?._id ? (
@@ -288,9 +288,9 @@ const Navbar = ({
             ) : (
               <Link
                 href="/login"
-                className={`${textColor} text-sm whitespace-pre xl:text-base mx-3 rounded-[10px]   py-1 sm:py-2 px-3 sm:px-6 lg:px-3 xl:px-6 bg-[#31D692] hover:bg-[#0DBC79] w-16 sm:w-24 lg:w-16 xl:w-24`}
+                className={``}
               >
-                Log in
+                
               </Link>
             )}
 
