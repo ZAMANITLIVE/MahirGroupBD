@@ -21,7 +21,7 @@ const Service4 = () => {
             }
          </div>
          <div className="flex items-center justify-center xl:mt-16 lg:mt-12 md:mt-10 sm:mt-8 mt-6">
-            <Link href="/service" className="flex items-center justify-center gap-2 bg-[#F9A61A] hover:bg-[#0DBC79] duration-300 text-white !rounded-[10px] common-btn ">
+            <Link href="/service" className="flex items-center justify-center gap-2 bg-[#F9A61A] hover:bg-[#f4bd61] duration-300 text-white !rounded-[10px] common-btn ">
                {i18n.t("More Services")}
                <FaArrowRightLong />
             </Link>
