@@ -77,7 +77,7 @@ const AboutSection = ({ bgColor = "bg-[#ECFDF4]", aboutMore }) => {
               />
             )}
           </div>
-          <div className="absolute hidden xl:block -right-[110px] top-[198px] rounded-[30px]  z-50 -translate-y-1/2 bg-[#0DBC79] text-white text-center font-semibold text-lg p-[15px] rotate-[-270deg] border-[4px] border-white">
+          <div className="absolute hidden xl:block -right-[110px] top-[198px] rounded-[30px]  z-50 -translate-y-1/2 bg-[#f4bd61] text-white text-center font-semibold text-lg p-[15px] rotate-[-270deg] border-[4px] border-white">
             <div className=" text-[#ECFDF4] items-center justify-center text-3xl lg:text-[56px] font-bold">
               {data?.content?.experience?.year_experiences}+{" "}
               <span className="description-1 relative bottom-3">
@@ -106,9 +106,9 @@ const AboutSection = ({ bgColor = "bg-[#ECFDF4]", aboutMore }) => {
           {!aboutMore && (
             <Link
               href="/about"
-              className="inline-flex text-lg mt-4 items-center text-[#0DBC79] font-semibold hover:underline"
+              className="inline-flex text-lg mt-4 items-center text-[#f4bd61] font-semibold hover:underline"
             >
-              About More <FaArrowRight className="ml-2 text-[#0DBC79]" />
+              About More <FaArrowRight className="ml-2 text-[#f4bd61]" />
             </Link>
           )}
 
