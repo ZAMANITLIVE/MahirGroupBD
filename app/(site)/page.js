@@ -189,8 +189,8 @@ export default function Home() {
           <div className="py-20 flex flex-col items-center justify-center xl:gap-36 lg:gap-32 md:gap-24 sm:gap-16 gap-12">
             <Service4 />
             <Product4 />
-            <CaseStudy4 />
-            <Testimonials4 />
+            
+            
             <Team4 />
             <div className="bg-[#ECFDF4] w-full xl:py-14 lg:py-12 md:py-10 sm:py-8 py-6">
               <Blog4 />
