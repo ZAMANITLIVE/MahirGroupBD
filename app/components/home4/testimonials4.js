@@ -61,13 +61,13 @@ const Testimonials4 = () => {
         <div className="flex justify-center items-center gap-4 mt-10">
           <button
             onClick={Previous}
-            className="bg-[#31D692] hover:bg-[#0DBC79] transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md"
+            className="bg-[#F9A61A] hover:bg-[#0DBC79] transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md"
           >
             <GoArrowLeft size={20} />
           </button>
           <button
             onClick={Next}
-            className="bg-[#31D692] hover:bg-[#0DBC79]  transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md"
+            className="bg-[#F9A61A] hover:bg-[#0DBC79]  transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md"
           >
             <GoArrowRight size={20} />
           </button>
