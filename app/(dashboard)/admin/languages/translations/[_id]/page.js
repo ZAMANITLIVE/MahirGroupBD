@@ -45,8 +45,7 @@ const Translations = () => {
 
   const keys = [
     // theme 1
-    { name: "Sister Concerns of Mahir Group
-" },
+    { name: "Trusted by over 32K growing companies" },
     { name: "Building World-Class Digital Marketplaces" },
     { name: "World-class digital agency & marketplace" },
     { name: "About US" },
