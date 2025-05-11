@@ -12,7 +12,8 @@ const Partner = ({theme, bgColor='bg-[#ECFDF4]', bgOpacity= 'bg-opacity-100'}) =
   const partnerImages = setting?.partner ? [...setting.partner, ...setting.partner] : [];
   return (
     <div className={` ${bgColor}  ${theme === 'theme4' ? ' ' : 'shadow-custom-light'}  py-4 md:py-6 xl:py-8`}>
-      <h1 className='font-medium sm:text-xl md:text-2xl font-lexend  text-[#333] text-center mb-10'>{i18n.t('Trusted by over 32K growing companies')}</h1>
+      <h1 className='font-medium sm:text-xl md:text-2xl font-lexend  text-[#333] text-center mb-10'>{i18n.t('Sister Concerns of Mahir Group
+')}</h1>
       <Marquee speed={100} pauseOnHover={true}>
         <div className="flex items-center gap-0">
           {partnerImages.map((image, index) => (
