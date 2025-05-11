@@ -63,7 +63,7 @@ const Hero4 = ({ data: heroData }) => {
 
             <div className="mt-8 flex gap-4 sm:gap-10 ">
               <Link href="/quote">
-                <div className="flex items-center  gap-1 sm:gap-2 bg-[#F9A61A] hover:bg-[#0DBC79] duration-300 py-2 sm:py-4 px-4 sm:px-8 rounded-[10px]">
+                <div className="flex items-center  gap-1 sm:gap-2 bg-[#F9A61A] hover:bg-[#f4bd61] duration-300 py-2 sm:py-4 px-4 sm:px-8 rounded-[10px]">
                   <p className="text-sm sm:text-lg font-medium text-[#fff] whitespace-pre">
                     Get a Quote
                   </p>
