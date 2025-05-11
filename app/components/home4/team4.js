@@ -21,7 +21,7 @@ const Team4 = () => {
             }
          </div>
          <div className="flex items-center justify-center xl:mt-16 lg:mt-12 md:mt-10 sm:mt-8 mt-6">
-            <Link href="/team" className="flex items-center justify-center gap-2 bg-[#31D692] hover:bg-[#0DBC79] duration-300 text-white !rounded-[10px] common-btn ">
+            <Link href="/team" className="flex items-center justify-center gap-2 bg-[#F9A61A] hover:bg-[#0DBC79] duration-300 text-white !rounded-[10px] common-btn ">
                {i18n.t("More Expertise")}
                <FaArrowRightLong />
             </Link>
