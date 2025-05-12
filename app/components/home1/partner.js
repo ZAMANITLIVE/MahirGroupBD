@@ -6,7 +6,7 @@ import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
-const Partner = ({theme, bgColor='bg-[#ECFDF4]', bgOpacity= 'bg-opacity-100'}) => {
+const Partner = ({theme, bgColor='bg-[#ffffff]', bgOpacity= 'bg-opacity-100'}) => {
   const  i18n = useI18n();
   const [setting] = useFetch(fetchPublicSettings);
   const partnerImages = setting?.partner ? [...setting.partner, ...setting.partner] : [];
