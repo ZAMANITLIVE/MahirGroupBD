@@ -30,7 +30,7 @@ const TeamPage4 = () => {
           heading="Top Management"
           description=""
         />
-        <div className="xl:mt-14 lg:mt-10 md:mt-8 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-6 md:gap-5 sm:gap-4 gap-3">
+        <div className="xl:mt-14 lg:mt-10 md:mt-8 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-6 md:gap-5 sm:gap-4 gap-3 justify-center">
           {paginatedData?.length > 0 ? (
             paginatedData.map((item, index) => (
               <TeamCard4 data={item} key={index} />
