@@ -24,7 +24,7 @@ const TeamPage4 = () => {
       <CommonBanner title="Team" textTitle="text-primary" />
       <div className="agency-container py-28">
         <SectionHeader
-          align="left"
+          align="center"
           maxWidth="max-w-[647px]"
           title="Team"
           heading="Top Management"
