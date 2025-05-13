@@ -57,7 +57,7 @@ const ServiceDetailsPage = () => {
             <h2 className="xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-2 text-white">
               {columnFormatter(data?.title)}
             </h2>
-            <p className="lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6">
+            <p className="lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6">
               {columnFormatter(data?.description)}
             </p>
           </div>

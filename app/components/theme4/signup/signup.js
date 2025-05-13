@@ -62,7 +62,7 @@ const SignUpPage = () => {
           <div className="px-10 sm:px-[150px] md:px-[200px] lg:px-[254px]">
             <div className="text-center">
               <h1 className='heading-6 text-white'>{i18n.t("Let's Join Us")}</h1>
-              <div className='mt-5 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-[60px] flex items-center justify-center'><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span><p className='text-[#888AA0] description-2 py-5 px-5'>{i18n.t("Sign in with your email")}</p><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span></div>
+              <div className='mt-5 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-[60px] flex items-center justify-center'><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span><p className='text-[#000000] description-2 py-5 px-5'>{i18n.t("Sign in with your email")}</p><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span></div>
             </div>
             <Form className='mt-3' layout='vertical' onFinish={handleSubmit} initialValues={{ name: '', email: '' }} autoComplete='off' form={form}>
               <div>
@@ -82,7 +82,7 @@ const SignUpPage = () => {
               </div>
             </Form>
             <div className='mt-5 sm:mt-6 lg:mt-8'>
-              <p className='description-1 text-[#888AA0]'>{i18n.t("Already have an account")}? <span className='text-primary cursor-pointer'><Link href={'/login'}>{i18n.t("Sign In")}</Link></span></p>
+              <p className='description-1 text-[#000000]'>{i18n.t("Already have an account")}? <span className='text-primary cursor-pointer'><Link href={'/login'}>{i18n.t("Sign In")}</Link></span></p>
             </div>
             <div className="lg:block hidden absolute -bottom-12 -left-[170px]">
               <Image width={265} height={147} className='h-24' src="/hand.png" alt="" />
@@ -94,7 +94,7 @@ const SignUpPage = () => {
         <div className="w-full p-10">
           <div className="">
             <h1 className='heading-6 text-white capitalize'>{i18n.t("Verify OTP")}</h1>
-            <p className='description-2 text-[#888AA0] font-normal mt-2 sm:mt-3'>{i18n.t("Please enter 4-digit code sent to")}<span className='text-primary'>{otpEmail}</span> </p>
+            <p className='description-2 text-[#000000] font-normal mt-2 sm:mt-3'>{i18n.t("Please enter 4-digit code sent to")}<span className='text-primary'>{otpEmail}</span> </p>
             <Form className='mt-5 md:mt-6 lg:mt-8 xl:mt-10' onFinish={
               async (value) => {
                 if (!!otp) {
@@ -125,7 +125,7 @@ const SignUpPage = () => {
                 <Input.OTP onChange={(value) => setOtp(value)} className='w-full p-3 sm:p-4 xl:p-5 glass-effect rounded text-white' length={5} />
               </div>
               <div>
-                <p className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 description-2 text-[#888AA0]'>
+                <p className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 description-2 text-[#000000]'>
                   {i18n.t("Don't receive the code")} ?
                   {
                     time === 0 ? (

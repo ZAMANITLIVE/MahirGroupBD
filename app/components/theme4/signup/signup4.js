@@ -58,11 +58,11 @@ const SignUpPage4 = () => {
     <section className=''>
       <CommonBanner title="Create Account" />
       <div className="agency-container py-12 sm:py-[70px] md:py-[90px] lg:py-[100px]">
-        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#ECFDF4] py-12 md:py-[90px] lg:py-[100px]">
+        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#FEF9E1] py-12 md:py-[90px] lg:py-[100px]">
           <div className="px-10 sm:px-[150px] md:px-[200px] lg:px-[254px]">
             <div className="text-center">
               <h1 className='heading-6 text-[#333]'>{i18n.t("Let's Join Us")}</h1>
-              <div className='mt-5 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-[60px] flex items-center justify-center'><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span><p className='text-[#888AA0] description-2 py-5 px-5'>{i18n.t("Sign in with your email")}</p><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span></div>
+              <div className='mt-5 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-[60px] flex items-center justify-center'><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span><p className='text-[#000000] description-2 py-5 px-5'>{i18n.t("Sign in with your email")}</p><span className='h-[2px] w-10 sm:w-14 bg-gray-500'></span></div>
             </div>
             <Form className='mt-3' layout='vertical theme5' onFinish={handleSubmit} initialValues={{ name: '', email: '' }} autoComplete='off' form={form}>
               <div>
@@ -78,11 +78,11 @@ const SignUpPage4 = () => {
                 <FormPassword className='w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary' confirm label='Re-type Password' name='confirm_password' placeholder='Confirm your password' required={true} />
               </div>
               <div className="text-center">
-                <button type='submit' className='w-full common-btn bg-primary xl:mt-8 lg:mt-6 sm:mt-5 mt-4'>{loading ? 'Loading ...' : 'Sign Up'}</button>
+                <button type='submit' className='w-full common-btn bg-primary xl:mt-8 lg:mt-6 sm:mt-5 mt-4'>{loading ? 'Loading ...' : ''}</button>
               </div>
             </Form>
             <div className='mt-5 sm:mt-6 lg:mt-8'>
-              <p className='description-1 text-[#888AA0]'>{i18n.t("Already have an account")}? <span className='text-primary cursor-pointer'><Link href={'/login'}>
+              <p className='description-1 text-[#000000]'>{i18n.t("Already have an account")}? <span className='text-primary cursor-pointer'><Link href={'/login'}>
                 {i18n.t("Sign In")}</Link></span>
               </p>
             </div>
@@ -96,7 +96,7 @@ const SignUpPage4 = () => {
         <div className="w-full p-10">
           <div className="">
             <h1 className='heading-6 text-[#333] capitalize'>{i18n.t("Verify OTP")}</h1>
-            <p className='description-2 text-[#888AA0] font-normal mt-2 sm:mt-3'>{i18n.t("Please enter 4-digit code sent to")}<span className='text-primary'>{otpEmail}</span> </p>
+            <p className='description-2 text-[#000000] font-normal mt-2 sm:mt-3'>{i18n.t("Please enter 4-digit code sent to")}<span className='text-primary'>{otpEmail}</span> </p>
             <Form className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 theme5' onFinish={
               async (value) => {
                 if (!!otp) {
@@ -127,7 +127,7 @@ const SignUpPage4 = () => {
                 <Input.OTP onChange={(value) => setOtp(value)} className='w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary' length={5} />
               </div>
               <div>
-                <p className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 description-2 text-[#888AA0]'>
+                <p className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 description-2 text-[#000000]'>
                   {i18n.t("Don't receive the code")} ?
                   {
                     time === 0 ? (

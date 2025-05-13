@@ -51,22 +51,22 @@ const CaseStudyDetailsPage = () => {
               )
             }
             <h2 className='xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-3 text-primary'>Title</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.title)}
             </p>
             <h2 className='xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-3 text-primary'>Description</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.description)}
             </p>
 
             <h2 className='xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-3 text-primary'>Result</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.result)}
             </p>
             <h2 className="xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-3 text-primary">Tags</h2>
             <div className="flex flex-wrap gap-2">
               {data?.tags.map((tag) => (
-                <span key={tag?._id} className="first:mt-4 mt-0 description-2 text-[#888AA0] rounded-md">
+                <span key={tag?._id} className="first:mt-4 mt-0 description-2 text-[#000000] rounded-md">
                   {columnFormatter(tag?.name)}
                 </span>
               ))}
@@ -75,24 +75,24 @@ const CaseStudyDetailsPage = () => {
           </div>
           <div className='mt-5 sm:mt-0 w-full sm:w-[50%] lg:w-[40%] xl:w-[30%] '>
             <div className='common-bg'>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] xl:px-7 xl:py-6 lg:py-5 md:py-4 p-3'>
+              <div className='flex items-center gap-3 border-b border-[#000000] xl:px-7 xl:py-6 lg:py-5 md:py-4 p-3'>
                 <FaUser className='text-primary text-6xl' />
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>Client</h2>
+                  <h2 className='description-2 text-[#000000]'>Client</h2>
                   <h2 className='heading-4 text-white mt-2'>{data?.client}</h2>
                 </div>
               </div>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] xl:px-7 xl:py-6 lg:py-5 md:py-4 p-3'>
+              <div className='flex items-center gap-3 border-b border-[#000000] xl:px-7 xl:py-6 lg:py-5 md:py-4 p-3'>
                 <FaMoneyCheckAlt className='text-primary text-6xl' />
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>Budget</h2>
+                  <h2 className='description-2 text-[#000000]'>Budget</h2>
                   <h2 className='heading-4 text-white mt-2'>{currency_symbol} {data?.budget}</h2>
                 </div>
               </div>
               <div className='flex items-center gap-3 xl:px-7 xl:py-6 lg:py-5 md:py-4 p-3'>
                 <IoMdStopwatch className='text-primary text-6xl' />
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>Duration</h2>
+                  <h2 className='description-2 text-[#000000]'>Duration</h2>
                   <h2 className='heading-4 text-white mt-2'>{data?.duration} hours</h2>
                 </div>
               </div>

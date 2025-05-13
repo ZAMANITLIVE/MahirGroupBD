@@ -27,13 +27,13 @@ const AboutPage4 = () => {
         </div>
         <div className="mb-28 mt-10">
           <Partner
-            bgColor="bg-[#ECFDF480]"
+            bgColor="bg-[#FEF9E180]"
             theme="theme4"
             bgOpacity="opacity-50"
           />
         </div>
         <Team4 />
-        <div className="mb-28 mt-20 bg-[#ECFDF480] py-12">
+        <div className="mb-28 mt-20 bg-[#FEF9E180] py-12">
           <Blog4 />
         </div>
       </div>

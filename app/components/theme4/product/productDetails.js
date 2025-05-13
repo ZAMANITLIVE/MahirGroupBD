@@ -105,7 +105,7 @@ const ProjectDetailsPage = () => {
               )
             }
             <h2 className='xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-3 text-primary'>{data?.name}</h2>
-            <p dangerouslySetInnerHTML={{ __html: columnFormatter(data?.description) }} className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6' />
+            <p dangerouslySetInnerHTML={{ __html: columnFormatter(data?.description) }} className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6' />
             <button onClick={() => {
               if (user) {
                 setIsModalOpen(true)
@@ -116,7 +116,7 @@ const ProjectDetailsPage = () => {
 
             }} className="xl:my-14 lg:my-12 md:my-8 my-6 bg-primary/50 text-white common-btn">{i18n.t('Purchase Now')}</button>
             <h2 className='xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-3 text-primary'>{i18n.t('Images')}</h2>
-            <div className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <div className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               <div className='flex items-center xl:gap-6 lg:gap-5 md:gap-4 gap-3'>
                 <div>
                   {
@@ -134,7 +134,7 @@ const ProjectDetailsPage = () => {
                 </div>
               </div>
             </div>
-            <div className='xl:mt-10 lg:mt-8 md:mt-7 mt-5 description-2 text-[#888AA0] font-normal leading-6'>
+            <div className='xl:mt-10 lg:mt-8 md:mt-7 mt-5 description-2 text-[#000000] font-normal leading-6'>
               <h2 className='heading-3 text-primary'>{i18n.t('Review')}</h2>
               {
                 publicReviewData?.docs?.length > 0 ? (
@@ -152,7 +152,7 @@ const ProjectDetailsPage = () => {
             </div>
             {
               check && (
-                <div className='xl:mt-10 lg:mt-8 md:mt-7 mt-5 description-2 text-[#888AA0] font-normal leading-6'>
+                <div className='xl:mt-10 lg:mt-8 md:mt-7 mt-5 description-2 text-[#000000] font-normal leading-6'>
                   <h2 className='heading-3 text-primary'>{i18n.t('Add Review')}</h2>
                   <div className="mt-4 border border-primary/30 p-3 lg:p-4 xl:p-5">
                     <Form className='mt-6' layout='vertical' onFinish={handleAddReview} form={addReviewForm}>
@@ -180,24 +180,24 @@ const ProjectDetailsPage = () => {
           </div>
           <div className='mt-5 sm:mt-0 w-full sm:w-[50%] lg:w-[40%] xl:w-[30%] '>
             <div className='common-bg'>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] xl:px-6 xl:py-5 lg:p-5 md:p-4 p-3'>
+              <div className='flex items-center gap-3 border-b border-[#000000] xl:px-6 xl:py-5 lg:p-5 md:p-4 p-3'>
                 <BiCategoryAlt className='text-primary xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl' />
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Category')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Category')}</h2>
                   <h2 className='heading-5 text-white '>{columnFormatter(data?.category?.name)}</h2>
                 </div>
               </div>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] xl:px-6 xl:py-5 lg:p-5 md:p-4 p-3'>
+              <div className='flex items-center gap-3 border-b border-[#000000] xl:px-6 xl:py-5 lg:p-5 md:p-4 p-3'>
                 <RiMoneyDollarCircleLine className='text-primary xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl' />
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Price')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Price')}</h2>
                   <h2 className='heading-5 text-white '>{currency_symbol} {data?.price?.amount}</h2>
                 </div>
               </div>
               <div className='flex items-center gap-3 xl:px-6 xl:py-5 lg:p-5  md:p-4 p-3'>
                 <TbDiscountOff className='text-primary xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl' />
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Discount')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Discount')}</h2>
                   <h2 className='heading-5 text-white '>{currency_symbol} {data?.price?.discount} </h2>
                 </div>
               </div>

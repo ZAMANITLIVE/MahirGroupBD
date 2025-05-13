@@ -49,7 +49,7 @@ const FAQPage = () => {
                       }
                       className="mb-8"
                     >
-                      <p className="text-[#888AA0] description-2">{columnFormatter(item?.answer)}</p>
+                      <p className="text-[#000000] description-2">{columnFormatter(item?.answer)}</p>
                     </Collapse.Panel>
                   ))}
                 </Collapse>

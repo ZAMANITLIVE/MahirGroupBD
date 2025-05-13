@@ -33,7 +33,7 @@ const QuotePage4 = () => {
     <section className=' '>
      <CommonBanner  title='Quote' textTitle='text-primary' />
       <div className="agency-container py-12 sm:py-[70px] ">
-        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#ECFDF4] rounded-2xl theme5  py-12">
+        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#FEF9E1] rounded-2xl theme5  py-12">
           <div className="px-10  sm:px-[150px] md:px-[200px] lg:px-[254px]">
             <h1 className='heading-6 text-[#333] text-center'>Request A Quote</h1>
             <Form className='2xl:mt-[60px] xl:mt-14 lg:mt-12 md:mt-10 sm:mt-8 mt-6' layout='vertical' onFinish={handleSubmit} initialValues={{ name: '', email: '' }} autoComplete='off' form={form}>
@@ -50,7 +50,7 @@ const QuotePage4 = () => {
                 <FormInput textArea={true} rows={3} className='w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary' label='Message' name='text' placeholder='Enter Your Text'  required={true} />
               </div>
               <div className="text-center">
-                <button type='submit'  className='w-full p-2 sm:p-3 text-lg font-inter font-medium xl:p-4 bg-[#31D692] hover:bg-[#0DBC79] text-white rounded-[10px] '>{loading ? i18n.t('Sending...') : i18n.t('Submit')}</button>
+                <button type='submit'  className='w-full p-2 sm:p-3 text-lg font-inter font-medium xl:p-4 bg-[#F4A434] hover:bg-[#FEF9E1] text-white rounded-[10px] '>{loading ? i18n.t('Sending...') : i18n.t('Submit')}</button>
               </div>
             </Form>
             <div className="lg:block hidden absolute -bottom-12 -left-[170px]">

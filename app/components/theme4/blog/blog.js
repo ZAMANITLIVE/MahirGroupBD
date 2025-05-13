@@ -52,7 +52,7 @@ const BlogPage = () => {
           <div className='mt-5 sm:mt-0 w-full sm:w-[40%] xl:w-[30%] '>
             <div className='flex flex-col 2xl:gap-[60px] xl:gap-12 lg:gap-10 md:gap-8 sm:gap-6 gap-5'>
               <div className='common-bg lg:px-5 lg:py-7 md:px-4 md:py-5 sm:px-3 sm:py-2 p-4'>
-                <SearchInput1 onChange={(e) => getData({ search: e.target.value })} className='w-full !py-2 !md:py-3  lg:!py-4 bg-[#55E6A5] bg-opacity-10 text-white' placeholder='Search Blog' />
+                <SearchInput1 onChange={(e) => getData({ search: e.target.value })} className='w-full !py-2 !md:py-3  lg:!py-4 bg-[#F4A434] bg-opacity-10 text-white' placeholder='Search Blog' />
               </div>
               <div className='common-bg lg:px-6 lg:py-7 md:px-4 md:py-5 sm:px-3 sm:py-2 p-4'>
                 <h3 className='heading-3 text-white'>Latest News</h3>
@@ -64,7 +64,7 @@ const BlogPage = () => {
                           <h4 className='description-1 text-white capitalize group-hover:text-primary transform !leading-6 duration-300'>{columnFormatter(item?.title)}</h4>
                           <div className='flex gap-2 lg:mt-4 sm:mt-3 mt-2'>
                             <FaCalendarAlt className='text-primary' />
-                            <p className='description-3 font-normal text-[#888AA0]'>{dayjs(item?.createdAt).format("MMM D, YYYY")}</p>
+                            <p className='description-3 font-normal text-[#000000]'>{dayjs(item?.createdAt).format("MMM D, YYYY")}</p>
                           </div>
                         </div>
                         <div className='w-[86px] h-[77px]'>
@@ -85,7 +85,7 @@ const BlogPage = () => {
                   <button
                     onClick={() => { setActiveCategory('All'), getData({ category: undefined }) }}
                     className={`group flex items-center justify-between lg:gap-3 gap-2 px-4 py-2 rounded-md duration-300
-                          ${activeCategory === 'All' ? 'text-primary bg-white/10' : 'text-[#888AA0]'}
+                          ${activeCategory === 'All' ? 'text-primary bg-white/10' : 'text-[#000000]'}
                         hover:text-primary hover:bg-white/10`}
                   >
                     <p className='description-2 font-normal'>All</p>
@@ -97,7 +97,7 @@ const BlogPage = () => {
                         key={item?.category?._id}
                         onClick={() => { setActiveCategory(item?.category?._id), getData({ category: item?.category?._id }) }}
                         className={`group flex items-center justify-between lg:gap-3 gap-2 px-4 py-2 rounded-md duration-300
-                          ${activeCategory === item?.category?._id ? 'text-primary bg-white/10' : 'text-[#888AA0]'}
+                          ${activeCategory === item?.category?._id ? 'text-primary bg-white/10' : 'text-[#000000]'}
                         hover:text-primary hover:bg-white/10`}
                       >
                         <p className='description-2 font-normal'>{columnFormatter(item?.category?.name)}</p>

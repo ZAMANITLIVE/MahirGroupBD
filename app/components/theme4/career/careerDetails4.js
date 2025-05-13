@@ -109,8 +109,8 @@ const CareersDetailsPage4 = () => {
                   <h2 className='heading-8 font-semibold text-[#333333]'>{item?.heading}</h2>
                   {
                     item.heading == "Educational Requirement" || item.heading == "Experience Requirement" || item.heading == "Additional Requirement" || item.heading == "Job Responsibility" ?
-                      (<p dangerouslySetInnerHTML={{ __html: item?.description }} className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 description-2 text-[#888AA0] font-normal leading-6' />) :
-                      (<p className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 description-2 text-[#888AA0] font-normal leading-6'>{item?.description}</p>)
+                      (<p dangerouslySetInnerHTML={{ __html: item?.description }} className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 description-2 text-[#000000] font-normal leading-6' />) :
+                      (<p className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 description-2 text-[#000000] font-normal leading-6'>{item?.description}</p>)
                   }
 
                 </div>
@@ -119,7 +119,7 @@ const CareersDetailsPage4 = () => {
           </div>
           <div className='mt-5 sm:mt-0 w-full sm:w-[40%] xl:w-[30%] '>
             <div className='flex flex-col 2xl:gap-[60px] xl:gap-12 lg:gap-10 md:gap-8 sm:gap-6 gap-5'>
-              <div className='bg-[#ECFDF4] xl:p-10 lg:p-8 md:p-6 p-4 rounded-[10px] lg:rounded-[20px]'>
+              <div className='bg-[#FEF9E1] xl:p-10 lg:p-8 md:p-6 p-4 rounded-[10px] lg:rounded-[20px]'>
                 <h3 className='heading-8 !font-lexend  text-[#333333]'>Job Information</h3>
                 <div className='xl:mt-10 lg:mt-8 md:mt-6 mt-5 flex flex-col lg:gap-3 gap-2'>
                   {
@@ -128,7 +128,7 @@ const CareersDetailsPage4 = () => {
                         key={item.id}
                         className='grid grid-cols-2 items-center gap-2 md:gap-4 border-b last:border-0 border-[#EBEDF9]/20 first:pt-0 pt-4 last:pb-0 pb-4'
                       >
-                        <p className='description-2 font-semibold text-[#888AA0]'>{item.name}</p>
+                        <p className='description-2 font-semibold text-[#000000]'>{item.name}</p>
                         <p className='description-1 font-medium text-[#333333]'>{item.value}</p>
                       </div>
                     ))
@@ -141,7 +141,7 @@ const CareersDetailsPage4 = () => {
         <div className='2xl:mt-[140px] xl:mt-[110px] lg:mt-[100px] md:mt-20 sm:mt-16 mt-12'>
           <h3 className='heading-2 !font-lexend text-primary'>Apply to job</h3>
           <Form className='theme5' layout='vertical' onFinish={handleSubmit} form={form}>
-            <div className='xl:p-10 lg:p-8 md:p-6 sm:p-5 p-4 xl:mt-8 lg:mt-7 md:mt-5 mt-4 border border-[#EBEDF9]/20 bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px]'>
+            <div className='xl:p-10 lg:p-8 md:p-6 sm:p-5 p-4 xl:mt-8 lg:mt-7 md:mt-5 mt-4 border border-[#EBEDF9]/20 bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px]'>
               <div className=''>
                 <h4 className='heading-3 !font-lexend font-semibold text-primary lg:pb-6 md:pb-5 pb-4 border-b border-[#EBEDF9]/20'>Personal Information</h4>
                 <div className='grid grid-cols-1 sm:grid-cols-2 xl:gap-8 lg:gap-6 gap-3 mt-5'>

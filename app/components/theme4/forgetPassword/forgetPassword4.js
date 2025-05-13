@@ -56,10 +56,10 @@ const ForgetPasswordPage4 = () => {
     <section className=''>
       <CommonBanner title="Forget Password" />
       <div className="agency-container py-12 sm:py-[70px] md:py-[90px] lg:py-[100px]">
-        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#ECFDF4] py-12 md:py-[90px] lg:py-[110px] xl:py-[130px] 2xl:py-[150px]">
+        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#FEF9E1] py-12 md:py-[90px] lg:py-[110px] xl:py-[130px] 2xl:py-[150px]">
           <div className="px-10 sm:px-[150px] md:px-[200px] lg:px-[232px]">
             <h1 className='heading-6 text-[#333] capitalize'>{i18n.t('Forgot Your Password')}?</h1>
-            <p className='description-2 text-[#888AA0] font-normal mt-2 sm:mt-3'>{i18n.t('Please enter your email to reset your password')}</p>
+            <p className='description-2 text-[#000000] font-normal mt-2 sm:mt-3'>{i18n.t('Please enter your email to reset your password')}</p>
             <Form initialValues={{ email: '' }} autoComplete='off' className='theme5 mt-5 md:mt-6 lg:mt-8 xl:mt-10' layout='vertical' onFinish={handleSubmit} form={form}>
               <div className=''>
                 <FormInput className='w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary' label='Email' isEmail={true} type={'email'} name='email' placeholder='Enter your email' required={true} />
@@ -78,7 +78,7 @@ const ForgetPasswordPage4 = () => {
         <div className="w-full p-10">
           <div className="">
             <h1 className='heading-6 text-[#333] capitalize'>{i18n.t('Verify OTP')}</h1>
-            <p className='description-2 text-[#888AA0] font-normal mt-2 sm:mt-3'>{i18n.t('Please enter 4-digit code sent to')} <span className='text-primary'>{otpEmail}</span> </p>
+            <p className='description-2 text-[#000000] font-normal mt-2 sm:mt-3'>{i18n.t('Please enter 4-digit code sent to')} <span className='text-primary'>{otpEmail}</span> </p>
             <Form className='theme5 mt-5 md:mt-6 lg:mt-8 xl:mt-10' onFinish={
               async (value) => {
                 if (!!otp) {
@@ -106,7 +106,7 @@ const ForgetPasswordPage4 = () => {
                 <Input.OTP onChange={(value) => setOtp(value)} className='w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary' length={5} />
               </div>
               <div>
-                <p className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 description-2 text-[#888AA0]'>
+                <p className='mt-5 md:mt-6 lg:mt-8 xl:mt-10 description-2 text-[#000000]'>
                   {i18n.t("Do not receive the code")} ?
                   {
                     time === 0 ? (
@@ -145,7 +145,7 @@ const ForgetPasswordPage4 = () => {
         <div className="w-full p-10">
           <div className="">
             <h1 className='heading-6 text-[#333] capitalize'>{i18n.t('Reset Password')}</h1>
-            <p className='description-2 text-[#888AA0] font-normal mt-2 sm:mt-3'>{i18n.t('Please enter your new password and confirm password')}</p>
+            <p className='description-2 text-[#000000] font-normal mt-2 sm:mt-3'>{i18n.t('Please enter your new password and confirm password')}</p>
             <Form className='theme5 mt-5 md:mt-6 lg:mt-8 xl:mt-10' onFinish={
               async (value) => {
                 if (!!otp) {

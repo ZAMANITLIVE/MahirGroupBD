@@ -90,7 +90,7 @@ const EventDetailsPage = () => {
             )}
             <h2 className='heading-2 text-white xl:mt-8 lg:mt-7 md:mt-5 mt-4'>{columnFormatter(data?.title)}</h2>
             <p
-              className='description-2 text-[#888AA0] font-normal leading-6 lg:mt-6 md:mt-5 mt-4'
+              className='description-2 text-[#000000] font-normal leading-6 lg:mt-6 md:mt-5 mt-4'
               dangerouslySetInnerHTML={{ __html: columnFormatter(data?.description) }}
             />
             {
@@ -118,7 +118,7 @@ const EventDetailsPage = () => {
                   {eventData.map((event, index) => (
                     <div key={index} className='mt-5 grid grid-cols-2'>
                       <h2 className='description-1 font-normal text-white'>{event.title}</h2>
-                      <h2 className='description-1 font-normal text-[#888AA0]'>{event.value}</h2>
+                      <h2 className='description-1 font-normal text-[#000000]'>{event.value}</h2>
                     </div>
                   ))}
                 </div>
@@ -135,7 +135,7 @@ const EventDetailsPage = () => {
                   {organizerData.map((event, index) => (
                     <div key={index} className='mt-5 grid grid-cols-2'>
                       <h2 className='description-1 font-normal text-white'>{event.title}</h2>
-                      <h2 className='description-1 font-normal text-[#888AA0]'>{event.value}</h2>
+                      <h2 className='description-1 font-normal text-[#000000]'>{event.value}</h2>
                     </div>
                   ))}
                 </div>

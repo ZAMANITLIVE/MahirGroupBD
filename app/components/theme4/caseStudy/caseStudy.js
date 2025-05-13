@@ -19,7 +19,7 @@ const CaseStudyPage = () => {
               <button
                 onClick={() => { setActiveTab("All"), getData({ category: undefined }) }}
                 className={`common-btn !rounded border border-primary whitespace-pre px-4 py-2 
-                                          ${activeTab === "All" ? 'bg-primary text-black' : 'text-[#888AA0]'}`}
+                                          ${activeTab === "All" ? 'bg-primary text-black' : 'text-[#000000]'}`}
               >
                 Show All
               </button>
@@ -28,7 +28,7 @@ const CaseStudyPage = () => {
                   key={item?._id}
                   onClick={() => { setActiveTab(item?._id), getData({ category: item?._id }) }}
                   className={`common-btn !rounded border border-primary whitespace-pre px-4 py-2 
-                                          ${activeTab === item?._id ? 'bg-primary text-black' : 'text-[#888AA0]'}`}
+                                          ${activeTab === item?._id ? 'bg-primary text-black' : 'text-[#000000]'}`}
                 >
                   {columnFormatter(item?.name)}
                 </button>

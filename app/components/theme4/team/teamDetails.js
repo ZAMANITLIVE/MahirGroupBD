@@ -81,7 +81,7 @@ const TeamDetailsPage = () => {
           <div className='mt-5 sm:mt-0 w-full sm:w-[50%]'>
             <div className=''>
               <h3 className='heading-6 text-white'>{data?.name}</h3>
-              <p className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>{columnFormatter(data?.about)}</p>
+              <p className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>{columnFormatter(data?.about)}</p>
               <p className='xl:mt-[42px] lg:mt-9 md:mt-7 mt-5 heading-3 text-white !font-normal'>{data?.phone}</p>
               <p className='md:mt-4 mt-3 heading-3 text-white !font-normal'>{data?.email}</p>
               <div className='xl:mt-[42px] lg:mt-9 md:mt-7 mt-5 flex items-center gap-3 md:gap-4 lg:gap-5'>
@@ -104,7 +104,7 @@ const TeamDetailsPage = () => {
         <div className='xl:mt-[60px] lg:mt-12 md:mt-10 sm:mt-7 mt-5 flex flex-col sm:flex-row 2xl:gap-[113px] xl:gap-24 lg:gap-14 md:gap-10 gap-4'>
           <div className='w-full sm:s-[50%]'>
             <h2 className='heading-6 text-white'>{i18n.t('Professional Skills')}</h2>
-            <p className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>{columnFormatter(data?.professional_info)} </p>
+            <p className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>{columnFormatter(data?.professional_info)} </p>
             <div className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 flex flex-col gap-8'>
               {
                 data?.dynamic_records?.map((item, index) => (
@@ -113,7 +113,7 @@ const TeamDetailsPage = () => {
                     <Progress
                       percent={item?.value}
                       strokeColor="#48E98A"
-                      trailColor="#888AA0"
+                      trailColor="#000000"
                       format={(percent) => <span style={{ color: "white" }}>{percent}%</span>}
                     />
                   </div>
@@ -123,7 +123,7 @@ const TeamDetailsPage = () => {
           </div>
           <div className='w-full sm:s-[50%]'>
             <h2 className='heading-6 text-white'>{i18n.t('Career Guidelines')}</h2>
-            <p className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>{columnFormatter(data?.guidelines)} </p>
+            <p className='xl:mt-8 lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>{columnFormatter(data?.guidelines)} </p>
           </div>
         </div>
         <div className='relative 2xl:p-14 xl:p-12 lg:p-10 md:p-8 sm:p-6 p-5 2xl:mt-[150px] xl:mt-[120px] lg:mt-[100px] md:mt-20 sm:mt-16 mt-12 max-w-[868px] mx-auto bg-[#122130]'>
@@ -144,7 +144,7 @@ const TeamDetailsPage = () => {
               <FormInput textArea={true} rows={4} className='w-full min-h-[112px] p-2 sm:p-3 xl:p-4 glass-effect rounded text-white' label='Message' type='text' name='text' placeholder='Enter your message ...' required={true} />
             </div>
             <div className="flex justify-center mt-8">
-              <button type='submit' className='common-btn bg-[#55E6A5]'>{loading ? 'Sending...' : 'Send Message'}</button>
+              <button type='submit' className='common-btn bg-[#F4A434]'>{loading ? 'Sending...' : 'Send Message'}</button>
             </div>
           </Form>
           <div className="lg:block hidden absolute -bottom-12 -left-[170px]">

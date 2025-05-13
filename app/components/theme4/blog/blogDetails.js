@@ -58,7 +58,7 @@ const BlogDetailsPage = () => {
               dangerouslySetInnerHTML={{
                 __html: columnFormatter(data?.description),
               }}
-              className="lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6"
+              className="lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6"
             ></p>
             {data?.banner_image && (
               <Image
@@ -75,7 +75,7 @@ const BlogDetailsPage = () => {
               <div className="flex items-center lg:gap-4 md:gap-3 gap-2">
                 {data?.tags?.map((tag) => (
                   <p
-                    className="description-2 font-normal text-[#888AA0]"
+                    className="description-2 font-normal text-[#000000]"
                     key={tag?._id}
                   >
                     {" "}
@@ -92,7 +92,7 @@ const BlogDetailsPage = () => {
                   onChange={(e) => {
                     getLatestBlog({ search: e.target.value });
                   }}
-                  className="w-full !py-2 !md:py-3  lg:!py-4 bg-[#55E6A5] bg-opacity-10 text-white"
+                  className="w-full !py-2 !md:py-3  lg:!py-4 bg-[#F4A434] bg-opacity-10 text-white"
                   placeholder="Search Latest Blog"
                 />
               </div>
@@ -111,7 +111,7 @@ const BlogDetailsPage = () => {
                         </h4>
                         <div className="flex gap-2 lg:mt-4 sm:mt-3 mt-2">
                           <FaCalendarAlt className="text-primary" />
-                          <p className="description-3 font-normal text-[#888AA0]">
+                          <p className="description-3 font-normal text-[#000000]">
                             {dayjs(item?.createdAt).format("MMM D, YYYY")}
                           </p>
                         </div>

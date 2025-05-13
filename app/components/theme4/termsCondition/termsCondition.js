@@ -15,7 +15,7 @@ const TermsConditionPage = () => {
       <Banner title='Terms & Conditions' />
       <div className="agency-container">
         <p
-          className="description text-[#888AA0]  pt-20 pb-40"
+          className="description text-[#000000]  pt-20 pb-40"
           dangerouslySetInnerHTML={{
             __html: columnFormatter(data?.content?.description),
           }}

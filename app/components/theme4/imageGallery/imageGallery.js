@@ -42,7 +42,7 @@ const ImageGalleryPage = () => {
                            ${
                              activeTab === "All"
                                ? "bg-primary text-black"
-                               : "text-[#888AA0]"
+                               : "text-[#000000]"
                            }`}
             >
               Show All
@@ -55,7 +55,7 @@ const ImageGalleryPage = () => {
                            ${
                              activeTab === item?._id
                                ? "bg-primary text-black"
-                               : "text-[#888AA0]"
+                               : "text-[#000000]"
                            }`}
               >
                 {columnFormatter(item?.name)}

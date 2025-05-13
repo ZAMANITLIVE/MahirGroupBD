@@ -55,13 +55,13 @@ const LoginPage4 = () => {
     <section className="">
       <CommonBanner title="Login" />
       <div className="agency-container py-12 sm:py-[70px] md:py-[90px] lg:py-[100px]">
-        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#ECFDF4] py-12 md:py-[90px] lg:py-[100px]">
+        <div className="md:max-w-[868px] w-full md:mx-auto relative bg-[#FEF9E1] py-12 md:py-[90px] lg:py-[100px]">
           <div className="px-10 sm:px-[150px] md:px-[200px] lg:px-[254px]">
             <div className="text-center">
               <h1 className="heading-6 text-[#333] capitalize">{i18n.t("Welcome back")}</h1>
               <div className="mt-5 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-[60px] flex items-center justify-center">
                 <span className="h-[2px] w-8 sm:w-10 bg-gray-500"></span>
-                <p className="text-[#888AA0] description-2 py-5 px-3">
+                <p className="text-[#000000] description-2 py-5 px-3">
                   {i18n.t("Sign in with your credentials")}
                 </p>
                 <span className="h-[2px] w-8 sm:w-10 bg-gray-500"></span>
@@ -110,12 +110,12 @@ const LoginPage4 = () => {
               </div>
             </Form>
             <div className="mt-5 sm:mt-6 lg:mt-8">
-              <p className="description-1 text-[#333]">
+              {/* <p className="description-1 text-[#333]">
                 {i18n?.t("Don't have an account")}?
                 <span className="text-primary cursor-pointer">
                   <Link href={"/signup"}>{i18n?.t("Sign Up")}</Link>
                 </span>
-              </p>
+              </p> */}
             </div>
             <div className="lg:block hidden absolute -bottom-12 -left-[170px]">
               <Image

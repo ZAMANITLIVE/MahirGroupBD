@@ -35,7 +35,7 @@ const ContactPage4 = () => {
     <div className="">
       <CommonBanner title="Contact" textTitle="text-primary" />
       <div className="lg:py-[100px] md:py-20 sm:py-16 py-12 agency-container">
-        <div className="agency-container relative bg-[#ECFDF4] border-[1px] border-[#E8EAE8] sm:p-10 p-4 rounded-[20px]">
+        <div className="agency-container relative bg-[#FEF9E1] border-[1px] border-[#E8EAE8] sm:p-10 p-4 rounded-[20px]">
           <div className="flex flex-col sm:flex-row xl:gap-8 lg:gap-7 md:gap-6 gap-5">
             <div className="w-full sm:w-[50%] lg:w-[60%] xl:w-[65%] ">
               <Form
@@ -87,37 +87,37 @@ const ContactPage4 = () => {
                   />
                 </div>
                 <div className="">
-                  <Button type="submit" className="common-btn !bg-[#31D692] hover:!bg-[#0DBC79]">
+                  <Button type="submit" className="common-btn !bg-[#F4A434] hover:!bg-[#FEF9E1]">
                    {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </div>
               </Form>
             </div>
             <div className="w-full sm:w-[50%] lg:w-[40%] xl:w-[35%]">
-              <div className="relative xl:mt-12 lg:mt-10 md:mt-6 mt-5 2xl:p-8 xl:p-7 lg:p-6 sm:p-5 p-4 bg-[#D0FBE3] border-[1px] border-[#E8EAE8] rounded-[20px]">
+              <div className="relative xl:mt-12 lg:mt-10 md:mt-6 mt-5 2xl:p-8 xl:p-7 lg:p-6 sm:p-5 p-4 bg-[#F4A434] border-[1px] border-[#E8EAE8] rounded-[20px]">
                 <h3 className="heading-8 text-[#333]">{data?.content?.title}</h3>
                 <p
-                  className="lg:mt-4 mt-3 description text-[#888AA0] font-normal"
+                  className="lg:mt-4 mt-3 description text-[#000000] font-normal"
                   dangerouslySetInnerHTML={{
                     __html: columnFormatter(data?.content?.description),
                   }}
                 ></p>
                 <div className="mt-8 flex flex-col gap-3">
                   <div className="flex items-center lg:gap-4 md:gap-2 gap-2">
-                    <FaPhoneVolume className="text-[#333]  p-[10px] rounded-full bg-[#0DBC79] hover:bg-primary" size={40}/>
-                    <p className="description-2 text-[#888AA0] font-normal">
+                    <FaPhoneVolume className="text-[#333]  p-[10px] rounded-full bg-[#FEF9E1] hover:bg-primary" size={40}/>
+                    <p className="description-2 text-[#000000] font-normal">
                       {setting?.site_phone}
                     </p>
                   </div>
                   <div className="flex items-center lg:gap-4 md:gap-2 gap-2 mt-2">
-                    <MdEmail className="text-[#333] p-[10px] rounded-full bg-[#0DBC79] hover:bg-primary" size={40} />
-                    <p className="description-2 text-[#888AA0] font-normal">
+                    <MdEmail className="text-[#333] p-[10px] rounded-full bg-[#FEF9E1] hover:bg-primary" size={40} />
+                    <p className="description-2 text-[#000000] font-normal">
                       {setting?.site_email}
                     </p>
                   </div>
                   <div className="flex lg:gap-4 md:gap-2 gap-2 mt-2">
-                    <FaLocationDot className="text-[#333]  p-[10px] rounded-full bg-[#0DBC79] hover:bg-primary" size={40} />
-                    <p className="description-2 text-[#888AA0] font-normal flex flex-col justify-center">
+                    <FaLocationDot className="text-[#333]  p-[10px] rounded-full bg-[#FEF9E1] hover:bg-primary" size={40} />
+                    <p className="description-2 text-[#000000] font-normal flex flex-col justify-center">
                       {setting?.site_address}
                     </p>
                   </div>
@@ -126,7 +126,7 @@ const ContactPage4 = () => {
                   <Link
                     // href='/'
                     href={setting?.social_media_link[0]?.link || "/"}
-                    className="group flex items-center justify-center w-10 h-10 rounded-full transform duration-300 bg-[#31D692] hover:bg-[#0DBC79]"
+                    className="group flex items-center justify-center w-10 h-10 rounded-full transform duration-300 bg-[] hover:bg-[]"
                   >
                     <FaFacebook
                       className="text-white transform duration-300 bg-transparent"
@@ -135,7 +135,7 @@ const ContactPage4 = () => {
                   </Link>
                   <Link
                     href={setting?.social_media_link[1]?.link || "/"}
-                    className="group transform duration-300 flex items-center justify-center w-10 h-10 rounded-full bg-[#31D692] hover:bg-[#0DBC79]"
+                    className=""
                   >
                     <FaTwitter
                       className="text-white transform duration-300"
@@ -144,7 +144,7 @@ const ContactPage4 = () => {
                   </Link>
                   <Link
                     href={setting?.social_media_link[3]?.link || "/"}
-                    className="group transform duration-300 flex items-center justify-center w-10 h-10 rounded-full bg-[#31D692] hover:bg-[#0DBC79]"
+                    className="group transform duration-300 flex items-center justify-center w-10 h-10 rounded-full bg-[] hover:bg-[]"
                   >
                     <FaLinkedin
                       className="text-white transform duration-300 "

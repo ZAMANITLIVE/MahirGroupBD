@@ -38,7 +38,7 @@ const EventsPage = () => {
               <div className="common-bg lg:px-5 lg:py-7 md:px-4 md:py-5 sm:px-3 sm:py-2 p-4">
                 <SearchInput1
                   onChange={(e) => getData({ search: e.target.value })}
-                  className="w-full !py-2 !md:py-3  lg:!py-4 bg-[#55E6A5] bg-opacity-10 text-white"
+                  className="w-full !py-2 !md:py-3  lg:!py-4 bg-[#F4A434] bg-opacity-10 text-white"
                   placeholder="Search"
                 />
               </div>
@@ -54,7 +54,7 @@ const EventsPage = () => {
                     className={`group flex items-center justify-between lg:gap-3 gap-2 px-4 py-2 rounded-md duration-300
                                         ${activeCategory === "All"
                         ? "text-primary bg-white/10"
-                        : "text-[#888AA0]"
+                        : "text-[#000000]"
                       }
                                       hover:text-primary hover:bg-white/10`}
                   >
@@ -78,7 +78,7 @@ const EventsPage = () => {
                       className={`group flex items-center justify-between lg:gap-3 gap-2 px-4 py-2 rounded-md duration-300
                                         ${activeCategory === item?.category?._id
                           ? "text-primary bg-white/10"
-                          : "text-[#888AA0]"
+                          : "text-[#000000]"
                         }
                                       hover:text-primary hover:bg-white/10`}
                     >

@@ -106,8 +106,8 @@ const CareersDetailsPage = () => {
                   <h2 className=' heading-3 font-semibold text-primary'>{item?.heading}</h2>
                   {
                     item.heading == "Educational Requirement" || item.heading == "Experience Requirement" || item.heading == "Additional Requirement" || item.heading == "Job Responsibility" ?
-                      (<p dangerouslySetInnerHTML={{ __html: item?.description }} className='lg:mt-2 mt-1 description-2 text-[#888AA0] font-normal leading-6' />) :
-                      (<p className='lg:mt-2 mt-1 description-2 text-[#888AA0] font-normal leading-6'>{item?.description}</p>)
+                      (<p dangerouslySetInnerHTML={{ __html: item?.description }} className='lg:mt-2 mt-1 description-2 text-[#000000] font-normal leading-6' />) :
+                      (<p className='lg:mt-2 mt-1 description-2 text-[#000000] font-normal leading-6'>{item?.description}</p>)
                   }
 
                 </div>
@@ -126,7 +126,7 @@ const CareersDetailsPage = () => {
                         className='grid grid-cols-2 items-center gap-2 md:gap-4 border-b border-[#EBEDF9]/20 lg:pb-6 lg:pt-4 md:pb-5 md:pt-3 sm:pb-4 sm:pt-2 pb-3 pt-1'
                       >
                         <p className='description-2 font-semibold text-white'>{item.name}</p>
-                        <p className='description-2 font-medium text-[#888AA0]'>{item.value}</p>
+                        <p className='description-2 font-medium text-[#000000]'>{item.value}</p>
                       </div>
                     ))
                   }

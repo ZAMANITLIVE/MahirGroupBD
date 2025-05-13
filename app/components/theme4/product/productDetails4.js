@@ -115,7 +115,7 @@ const ProjectDetailsPage4 = () => {
           <div className='w-full sm:w-[50%] lg:w-[60%] xl:w-[66%]'>
             <div className='w-full'>
               <div className='w-full'>
-                <div className='relative bg-[#ECFDF4] xl:p-10 lg:p-8 md:p-6 p-5 rounded-[10px] lg:rounded-[20px]'>
+                <div className='relative bg-[#FEF9E1] xl:p-10 lg:p-8 md:p-6 p-5 rounded-[10px] lg:rounded-[20px]'>
                   <Swiper
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     keyboard={{ enabled: true }}
@@ -163,13 +163,13 @@ const ProjectDetailsPage4 = () => {
                   <div className="absolute inset-0 flex items-center justify-between px-4 z-50 pointer-events-none">
                     <button
                       onClick={Previous}
-                      className="bg-[#31D692] hover:bg-[#0DBC79] transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md pointer-events-auto"
+                      className="bg-[#F4A434] hover:bg-[#FEF9E1] transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md pointer-events-auto"
                     >
                       <GoArrowLeft size={20} />
                     </button>
                     <button
                       onClick={Next}
-                      className="bg-[#31D692] hover:bg-[#0DBC79] transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md pointer-events-auto"
+                      className="bg-[#F4A434] hover:bg-[#FEF9E1] transform duration-300 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-md pointer-events-auto"
                     >
                       <GoArrowRight size={20} />
                     </button>
@@ -178,9 +178,9 @@ const ProjectDetailsPage4 = () => {
               </div>
             </div>
             <h2 className='xl:mt-10 lg:mt-8 md:mt-6 mt-5 heading-2 !font-lexend text-[#333333]'>{data?.name}</h2>
-            <p dangerouslySetInnerHTML={{ __html: columnFormatter(data?.description) }} className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6' />
+            <p dangerouslySetInnerHTML={{ __html: columnFormatter(data?.description) }} className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6' />
             <div className='xl:mt-[60px] lg:mt-12 md:mt-10 mt-7 xl:p-10 lg:p-8 md:p-6 p-5 border rounded-[10px] lg:rounded-[20px] w-full'>
-              <div className='description-2 text-[#888AA0] font-normal leading-6'>
+              <div className='description-2 text-[#000000] font-normal leading-6'>
                 <h2 className='heading-9 text-[#333333]'>{i18n.t('Review')}</h2>
                 {
                   publicReviewData?.docs?.length > 0 ? (
@@ -198,7 +198,7 @@ const ProjectDetailsPage4 = () => {
               </div>
               {
                 check && (
-                  <div className='xl:mt-10 lg:mt-8 md:mt-7 mt-5 description-2 text-[#888AA0] font-normal leading-6'>
+                  <div className='xl:mt-10 lg:mt-8 md:mt-7 mt-5 description-2 text-[#000000] font-normal leading-6'>
                     <h2 className='heading-9 text-[#333333]'>{i18n.t('Add Review')}</h2>
                     <div className="mt-4 border border-primary/30 rounded-[10px] p-3 lg:p-4 xl:p-5">
                       <Form className='mt-6 ' layout='vertical' onFinish={handleAddReview} form={addReviewForm}>
@@ -226,22 +226,22 @@ const ProjectDetailsPage4 = () => {
             </div>
           </div>
           <div className='mt-5 sm:mt-0 w-full sm:w-[50%] lg:w-[40%] xl:w-[34%]'>
-            <div className='bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] pb-5'>
+            <div className='bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
+              <div className='flex items-center gap-3 border-b border-[#000000] pb-5'>
                 <div className='bg-[#A6F4CC] h-14 w-14 rounded-full flex items-center justify-center'>
                   <BiCategoryAlt className='text-[#333] p-1 text-3xl ' />
                 </div>
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Category')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Category')}</h2>
                   <h2 className='heading-5 font-medium text-[#333] '>{columnFormatter(data?.category?.name)}</h2>
                 </div>
               </div>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] py-5'>
+              <div className='flex items-center gap-3 border-b border-[#000000] py-5'>
                 <div className='bg-[#A6F4CC] h-14 w-14 rounded-full flex items-center justify-center'>
                   <RiMoneyDollarCircleLine className='text-[#333] p-1 text-4xl ' />
                 </div>
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Price')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Price')}</h2>
                   <h2 className='heading-5 text-primary '>{currency_symbol} {data?.price?.amount}</h2>
                 </div>
               </div>
@@ -250,7 +250,7 @@ const ProjectDetailsPage4 = () => {
                   <TbDiscountOff className='text-[#333] p-1 text-4xl ' />
                 </div>
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Discount')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Discount')}</h2>
                   <h2 className='heading-5 text-[#EF4444] '>{currency_symbol} {data?.price?.discount} </h2>
                 </div>
               </div>
@@ -266,7 +266,7 @@ const ProjectDetailsPage4 = () => {
                 </button>
               </div>
             </div>
-            <div className='bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
+            <div className='bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
               <h2 className='heading-8 !font-lexend text-[#333]'>{i18n.t('Related Products')}</h2>
               <div className='xl:mt-10 lg:mt-8 md:mt-6 mt-5'>
                 {data?.related_products?.map((product) => (
@@ -285,7 +285,7 @@ const ProjectDetailsPage4 = () => {
                 ))}
               </div>
             </div>
-            <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
+            <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
               <h2 className='heading-8 !font-lexend  text-[#333]'>{i18n.t('Have Query ?')}</h2>
               <Form className='mt-6 theme5' layout='vertical' onFinish={handleSubmit} form={form}>
                 <div>

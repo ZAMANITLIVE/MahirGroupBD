@@ -59,7 +59,7 @@ const CareersPage4 = () => {
             </div>
           </div>
           <div className="w-full  md:w-1/3">
-            <div className="bg-[#ECFDF4] xl:px-7 xl:py-8 lg:px-6 lg:py-7 sm:px-5 sm:py-6 p-4 lg:rounded-[20px] rounded-[10px] ">
+            <div className="bg-[#FEF9E1] xl:px-7 xl:py-8 lg:px-6 lg:py-7 sm:px-5 sm:py-6 p-4 lg:rounded-[20px] rounded-[10px] ">
               <h2 className="heading-8 !font-lexend text-[#333333]">{i18n.t("Have Query")} ?</h2>
               <Form
                 className="mt-6 theme5"

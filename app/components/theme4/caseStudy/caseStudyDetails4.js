@@ -48,7 +48,7 @@ const CaseStudyDetailsPage4 = () => {
       <div className='lg:py-[100px] md:py-20 sm:py-16 py-12 agency-container'>
         <div className='flex flex-col sm:flex-row xl:gap-6 lg:gap-5 md:gap-4 gap-3'>
           <div className='w-full sm:w-[50%] lg:w-[60%] xl:w-[67%]'>
-            <div className='bg-[#ECFDF4] xl:p-6 lg:p-5 md:p-4 p-3 rounded-[10px] lg:rounded-[20px]'>
+            <div className='bg-[#FEF9E1] xl:p-6 lg:p-5 md:p-4 p-3 rounded-[10px] lg:rounded-[20px]'>
               {
                 data?.banner_image && (
                   <Image className='rounded-[10px] lg:rounded-[20px] w-full xl:h-[420px] lg:h-[320px] md:h-[250px] sm:h-[220px] h-[200px] object-fill' src={data?.banner_image} width={1000} height={1000} alt="image" />
@@ -61,43 +61,43 @@ const CaseStudyDetailsPage4 = () => {
               </span>
             </h2>
             <h2 className='xl:mt-10 lg:mt-8 md:mt-6 mt-6 heading-8 text-[#333]'>{i18n.t("Description")}</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.description)}
             </p>
             <h2 className='xl:mt-10 lg:mt-8 md:mt-6 mt-6 heading-8 text-[#333]'>{i18n.t("Challenge")}</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.challenge)}
             </p>
             <h2 className='xl:mt-10 lg:mt-8 md:mt-6 mt-6 heading-8 text-[#333]'>{i18n.t("Problem")}</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.problem)}
             </p>
             <h2 className='xl:mt-10 lg:mt-8 md:mt-6 mt-6 heading-8 text-[#333]'>{i18n.t("Solution")}</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.solution)}
             </p>
             <h2 className='xl:mt-10 lg:mt-8 md:mt-6 mt-6 heading-8 text-[#333]'>{i18n.t("Result")}</h2>
-            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+            <p className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
               {columnFormatter(data?.result)}
             </p>
           </div>
           <div className='mt-5 sm:mt-0 w-full sm:w-[50%] lg:w-[40%] xl:w-[33%]'>
-            <div className='bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] pb-5'>
+            <div className='bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
+              <div className='flex items-center gap-3 border-b border-[#000000] pb-5'>
                 <div className='bg-[#A6F4CC] h-14 w-14 rounded-full flex items-center justify-center'>
                   <FaUser className='text-[#333] p-1 text-3xl ' />
                 </div>
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Client')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Client')}</h2>
                   <h2 className='heading-5 font-medium text-[#333]'>{data?.client}</h2>
                 </div>
               </div>
-              <div className='flex items-center gap-3 border-b border-[#888AA0] py-5'>
+              <div className='flex items-center gap-3 border-b border-[#000000] py-5'>
                 <div className='bg-[#A6F4CC] h-14 w-14 rounded-full flex items-center justify-center'>
                   <FaMoneyCheckAlt className='text-[#333] p-1 text-4xl ' />
                 </div>
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Budget')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Budget')}</h2>
                   <h2 className='heading-5 text-primary '>{currency_symbol} {data?.budget}</h2>
                 </div>
               </div>
@@ -106,12 +106,12 @@ const CaseStudyDetailsPage4 = () => {
                   <IoMdStopwatch className='text-[#333] p-1 text-4xl ' />
                 </div>
                 <div className=''>
-                  <h2 className='description-2 text-[#888AA0]'>{i18n.t('Duration')}</h2>
+                  <h2 className='description-2 text-[#000000]'>{i18n.t('Duration')}</h2>
                   <h2 className='heading-5 text-[#333]'>{data?.duration} hours</h2>
                 </div>
               </div>
             </div>
-            <div className='bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
+            <div className='bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
               <h2 className='heading-8 !font-lexend text-[#333]'>{i18n.t('Related Case Study')}</h2>
               <div className='xl:mt-10 lg:mt-8 md:mt-6 mt-5'>
                 {data?.related_case_study?.map((caseStudy) => (
@@ -121,14 +121,14 @@ const CaseStudyDetailsPage4 = () => {
                       <Image width={1000} height={1000} src={caseStudy?.card_image} alt="image" className="w-14 h-14 object-cover rounded-[10px]" />
                       <div>
                         <h3 className="description-1">{columnFormatter(caseStudy?.title)}</h3>
-                        <h3 className="description-1 text-[#888AA0] mt-2">🕒 {data?.duration} hours</h3>
+                        <h3 className="description-1 text-[#000000] mt-2">🕒 {data?.duration} hours</h3>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
+            <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
               <h2 className='heading-8 !font-lexend text-[#333]'>{i18n.t('Have Query')}?</h2>
               <Form className='mt-6 theme5' layout='vertical' onFinish={handleSubmit} form={form}>
                 <div>
@@ -148,7 +148,7 @@ const CaseStudyDetailsPage4 = () => {
                 </div>
               </Form>
             </div>
-            <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
+            <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
               <h2 className='heading-8 !font-lexend text-[#333]'>{i18n.t('Popular Tags')}</h2>
               <div className="flex flex-wrap gap-2 xl:mt-10 lg:mt-8 md:mt-6 mt-5">
                 {data?.tags.map((tag) => (

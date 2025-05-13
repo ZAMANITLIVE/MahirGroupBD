@@ -89,30 +89,30 @@ const EventDetailsPage4 = () => {
         <div className='flex items-center xl:gap-6 lg:gap-5 gap-4 xl:mt-7 lg:mt-6 md:mt-5 mt-4'>
           <div className='flex items-center gap-2'>
             <IoLocationSharp className='text-primary' />
-            <p className='description-2 text-[#888AA0]'>{data?.location}</p>
+            <p className='description-2 text-[#000000]'>{data?.location}</p>
           </div>
           <div className='flex items-center gap-2'>
             <MdOutlineWatchLater className='text-primary' />
-            <p className='description-2 text-[#888AA0]'>{dayjs(data?.date).format('DD MMM YYYY')}</p>
+            <p className='description-2 text-[#000000]'>{dayjs(data?.date).format('DD MMM YYYY')}</p>
           </div>
         </div>
         <div className='flex flex-col sm:flex-row xl:gap-6 lg:gap-5 md:gap-4 gap-3'>
           <div className='w-full sm:w-[60%] xl:w-[70%]'>
             <h2 className='heading-2 !font-lexend text-[#333] xl:mt-10 lg:mt-7 md:mt-7 mt-5'>{columnFormatter(data?.title)}</h2>
             <p
-              className='description-2 text-[#888AA0] font-normal leading-6 lg:mt-6 md:mt-5 mt-4'
+              className='description-2 text-[#000000] font-normal leading-6 lg:mt-6 md:mt-5 mt-4'
               dangerouslySetInnerHTML={{ __html: columnFormatter(data?.description) }}
             />
 
           </div>
           <div className='w-full sm:w-[40%] xl:w-[30%] mt-5 sm:mt-0'>
             <div className=''>
-              <div className='bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
+              <div className='bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
                 <h2 className='heading-3 !font-lexend text-[#333]'>{i18n.t('Event Info')}</h2>
                 <div className='xl:mt-8 lg:mt-7 md:mt-6 mt-5'>
                   {eventData.map((event, index) => (
                     <div key={index} className='first:pt-0 last:pb-0 pt-4 pb-4 last:border-b-0 border-b grid grid-cols-2'>
-                      <h2 className='description-2 font-normal text-[#888AA0]'>{event.title}</h2>
+                      <h2 className='description-2 font-normal text-[#000000]'>{event.title}</h2>
                       <h2 className='description-1 font-normal text-[#333]'>{event.value}</h2>
                     </div>
                   ))}
@@ -127,13 +127,13 @@ const EventDetailsPage4 = () => {
                     </div>
                     <div className=''>
                       <p className='description-1 text-[#333] !font-semibold'>{data?.organizer_name}</p>
-                      <p className='description-2 text-[#888AA0]'>Organizer</p>
+                      <p className='description-2 text-[#000000]'>Organizer</p>
                     </div>
                   </div>
                   <div className='xl:mt-8 lg:mt-7 md:mt-6 mt-5'>
                     {organizerData.map((event, index) => (
                       <div key={index} className='first:pt-0 last:pb-0 pt-4 pb-4 last:border-b-0 border-b grid grid-cols-2'>
-                        <h2 className='description-2 font-normal text-[#888AA0]'>{event.title}</h2>
+                        <h2 className='description-2 font-normal text-[#000000]'>{event.title}</h2>
                         <h2 className='description-1 font-normal text-[#333]'>{event.value}</h2>
                       </div>
                     ))}

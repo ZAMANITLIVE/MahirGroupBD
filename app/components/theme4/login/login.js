@@ -61,7 +61,7 @@ const LoginPage = () => {
               <h1 className="heading-6 text-white capitalize">{i18n.t("Welcome back")}</h1>
               <div className="mt-5 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-[60px] flex items-center justify-center">
                 <span className="h-[2px] w-8 sm:w-10 bg-gray-500"></span>
-                <p className="text-[#888AA0] description-2 py-5 px-3">
+                <p className="text-[#000000] description-2 py-5 px-3">
                 {i18n.t("Sign in with your credentials")}
                 </p>
                 <span className="h-[2px] w-8 sm:w-10 bg-gray-500"></span>
@@ -110,7 +110,7 @@ const LoginPage = () => {
               </div>
             </Form>
             <div className="mt-5 sm:mt-6 lg:mt-8">
-              <p className="description-1 text-[#888AA0]">
+              <p className="description-1 text-[#000000]">
               {i18n?.t("Don't have an account")}?
                 <span className="text-primary cursor-pointer">
                   <Link href={"/signup"}>{i18n?.t("Sign Up")}</Link>

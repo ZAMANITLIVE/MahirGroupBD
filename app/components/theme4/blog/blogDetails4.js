@@ -39,11 +39,11 @@ const BlogDetailsPage4 = () => {
         <div className='flex items-center xl:gap-6 lg:gap-5 gap-4 xl:mt-7 lg:mt-6 md:mt-5 mt-4'>
           <div className='flex items-center gap-2'>
             <MdPerson className='text-primary' />
-            <p className='description-2 text-[#888AA0]'>{data?.author?.name}</p>
+            <p className='description-2 text-[#000000]'>{data?.author?.name}</p>
           </div>
           <div className='flex items-center gap-2'>
             <MdOutlineWatchLater className='text-primary' />
-            <p className='description-2 text-[#888AA0]'>{dayjs(data?.createdAt).format('DD MMM YYYY')}</p>
+            <p className='description-2 text-[#000000]'>{dayjs(data?.createdAt).format('DD MMM YYYY')}</p>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row xl:gap-6 lg:gap-5 md:gap-4 gap-3">
@@ -53,12 +53,12 @@ const BlogDetailsPage4 = () => {
               dangerouslySetInnerHTML={{
                 __html: columnFormatter(data?.description),
               }}
-              className="lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6"
+              className="lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6"
             />
           </div>
           <div className="mt-5 sm:mt-0 w-full sm:w-[40%] xl:w-[30%] ">
             <div className="">
-              <div className='bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
+              <div className='bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:mt-6 lg:mt-5 md:mt-4 mt-3 p-10'>
                 <h2 className='heading-8 !font-lexend text-[#333]'>{i18n.t('Latest Blog')}</h2>
                 <div className='xl:mt-10 lg:mt-8 md:mt-6 mt-5'>
                   {latestBlog?.docs?.map((blog) => (
@@ -69,14 +69,14 @@ const BlogDetailsPage4 = () => {
                         <Image width={1000} height={1000} src={blog?.card_image} alt="image" className="w-14 h-14 object-cover rounded-[10px]" />
                         <div>
                           <h3 className="description-1">{columnFormatter(blog?.title)}</h3>
-                          <h3 className="description-1 text-[#888AA0] mt-2">🕒  {dayjs(blog?.createdAt).format("MMM D, YYYY")}</h3>
+                          <h3 className="description-1 text-[#000000] mt-2">🕒  {dayjs(blog?.createdAt).format("MMM D, YYYY")}</h3>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
+              <div className='xl:mt-6 lg:mt-5 md:mt-4 mt-3 bg-[#FEF9E1] rounded-[10px] lg:rounded-[20px] xl:p-10 lg:p-8 md:p-7 sm:p-6 p-5'>
                 <h2 className='heading-8 !font-lexend text-[#333]'>{i18n.t('Popular Tags')}</h2>
                 <div className="flex flex-wrap gap-2 xl:mt-10 lg:mt-8 md:mt-6 mt-5">
                   {data?.tags.map((tag) => (

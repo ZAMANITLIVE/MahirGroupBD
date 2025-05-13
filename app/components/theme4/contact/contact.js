@@ -86,7 +86,7 @@ const ContactPage = () => {
                   />
                 </div>
                 <div className="">
-                  <Button type="submit" className="common-btn bg-[#55E6A5]">
+                  <Button type="submit" className="common-btn bg-[#F4A434]">
                    {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </div>
@@ -96,7 +96,7 @@ const ContactPage = () => {
               <div className="relative xl:mt-12 lg:mt-10 md:mt-6 mt-5 2xl:p-8 xl:p-7 lg:p-6 sm:p-5 p-4 bg-[#003049] rounded">
                 <h3 className="heading-8 text-white">{data?.content?.title}</h3>
                 <p
-                  className="lg:mt-4 mt-3 description text-[#888AA0] font-normal"
+                  className="lg:mt-4 mt-3 description text-[#000000] font-normal"
                   dangerouslySetInnerHTML={{
                     __html: columnFormatter(data?.content?.description),
                   }}
@@ -104,19 +104,19 @@ const ContactPage = () => {
                 <div className="2xl:mt-[122px] xl:mt-[100px] lg:mt-20 md:mt-14 sm:mt-12 mt-8 flex flex-col gap-3">
                   <div className="flex items-center lg:gap-4 md:gap-2 gap-2">
                     <FaPhoneVolume className="text-white" size={20} />
-                    <p className="description-2 text-[#888AA0] font-normal">
+                    <p className="description-2 text-[#000000] font-normal">
                       {setting?.site_phone}
                     </p>
                   </div>
                   <div className="flex items-center lg:gap-4 md:gap-2 gap-2 mt-2">
                     <MdEmail className="text-white" size={20} />
-                    <p className="description-2 text-[#888AA0] font-normal">
+                    <p className="description-2 text-[#000000] font-normal">
                       {setting?.site_email}
                     </p>
                   </div>
                   <div className="flex lg:gap-4 md:gap-2 gap-2 mt-2">
                     <FaLocationDot className="text-white mt-1" size={20} />
-                    <p className="description-2 text-[#888AA0] font-normal">
+                    <p className="description-2 text-[#000000] font-normal">
                       {setting?.site_address}
                     </p>
                   </div>
