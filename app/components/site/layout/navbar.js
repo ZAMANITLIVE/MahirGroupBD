@@ -68,18 +68,12 @@ const Navbar = ({
       icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
       label: "Pages +",
       children: [
-        {
-          label: "Case Study",
-          key: "/caseStudy",
-        },
+        
         {
           key: "/careers",
           label: "Career",
         },
-        {
-          key: "/events",
-          label: "Events",
-        },
+        
         {
           label: "Contact",
           key: "/contact",
@@ -89,35 +83,13 @@ const Navbar = ({
           label: "Blogs",
         },
 
-        {
-          label: "Team",
-          key: "/team",
-        },
+      
 
         {
           key: "/faq",
           label: "Faq",
         },
-        {
-          label: "Testimonials",
-          key: "/testimonials",
-        },
-        {
-          key: "/videoGallery",
-          label: "Video Gallery",
-        },
-        {
-          key: "/imageGallery",
-          label: "Image Gallery",
-        },
-        {
-          label: "Terms & Condition",
-          key: "/termsCondition",
-        },
-        {
-          label: "Privacy & Policy",
-          key: "/privacyPolicy",
-        },
+        
       ],
     },
   ];

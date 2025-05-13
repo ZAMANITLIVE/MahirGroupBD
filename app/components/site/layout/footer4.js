@@ -27,26 +27,24 @@ const Footer4 = () => {
    const navLinks1 = [
       { name: "Home", link: "/" },
       { name: "About", link: "/about" },
-      { name: "Contact", link: "/contact" },
+      
       { name: "Services", link: "/service" },
-      { name: "Event", link: "/events" },
+      
       { name: "Product", link: "/project" },
    ]
    const navLinks2 = [
-      { name: "Case Study", link: "/caseStudy" },
-      { name: "Blog", link: "/blog" },
+      
+      
       { name: "Career ", link: "/careers" },
       { name: "Team", link: "/team" },
       { name: "FAQ", link: "/faq" },
-      { name: "Testimonial", link: "/testimonials" },
+      
    ]
    const navLinks3 = [
-      { name: "Privacy Policy", link: "/privacyPolicy" },
-      { name: "Terms & Conditions", link: "/termsCondition" },
-      { name: "Quote", link: "/quote" },
+      { name: "Contact", link: "/contact" },
+      { name: "Blog", link: "/blog" },
       { name: "Job ", link: "/careers" },
-      { name: "Gallery", link: "/imageGallery" },
-      { name: "Video", link: "/videoGallery" },
+      
    ]
    const navIcons = [
       {
@@ -67,7 +65,7 @@ const Footer4 = () => {
       },
    ];
    return (
-      <div className="bg-[#ECFDF4] w-full xl:pt-10 lg:pt-9 md:pt-7 pt-5 pb-1">
+      <div className="bg-[#FEF9E1] w-full xl:pt-10 lg:pt-9 md:pt-7 pt-5 pb-1">
          <div className="agency-container">
             <div className="flex flex-col sm:flex-row justify-center gap-3 lg:gap-0">
                <div className="w-full sm:w-[45%]">
@@ -118,7 +116,7 @@ const Footer4 = () => {
                         <h3 className="heading-5 text-[#333] !font-medium">Pages</h3>
                         <ul className="xl:mt-8 lg:mt-7 md:mt-6 mt-5">
                            {navLinks1?.map((item, index) => (
-                              <li key={index} className="first:mt-0 xl:mt-7 lg:mt-6 md:mt-5 mt-4 description-2 !font-normal text-[#888AA0] transform duration-300 hover:text-[#55E6A5] cursor-pointer">
+                              <li key={index} className="first:mt-0 xl:mt-7 lg:mt-6 md:mt-5 mt-4 description-2 !font-normal text-[#000000] transform duration-300 hover:text-[#F4A434] cursor-pointer">
                                  <Link className="" href={item?.link}>{item?.name}</Link>
                               </li>
                            ))}
@@ -128,7 +126,7 @@ const Footer4 = () => {
                      <div>
                         <ul className="xl:mt-[60px] lg:mt-12 md:mt-10 mt-8">
                            {navLinks2?.map((item, index) => (
-                              <li key={index} className="first:mt-0 xl:mt-7 lg:mt-6 md:mt-5 mt-4 description-2 !font-normal text-[#888AA0] transform duration-300 hover:text-[#55E6A5] cursor-pointer">
+                              <li key={index} className="first:mt-0 xl:mt-7 lg:mt-6 md:mt-5 mt-4 description-2 !font-normal text-[#000000] transform duration-300 hover:text-[#F4A434] cursor-pointer">
                                  <Link className="" href={item?.link}>{item?.name}</Link>
                               </li>
                            ))}
@@ -139,7 +137,7 @@ const Footer4 = () => {
                         <h3 className="heading-5 text-[#333] !font-medium">Quick Links</h3>
                         <ul className="xl:mt-8 lg:mt-7 md:mt-6 mt-5">
                            {navLinks3?.map((item, index) => (
-                              <li key={index} className="first:mt-0 xl:mt-7 lg:mt-6 md:mt-5 mt-4 description-2 !font-normal text-[#888AA0] transform duration-300 hover:text-[#55E6A5] cursor-pointer">
+                              <li key={index} className="first:mt-0 xl:mt-7 lg:mt-6 md:mt-5 mt-4 description-2 !font-normal text-[#000000] transform duration-300 hover:text-[#F4A434] cursor-pointer">
                                  <Link className="" href={item?.link}>{item?.name}</Link>
                               </li>
                            ))}
@@ -151,7 +149,7 @@ const Footer4 = () => {
 
             <div className="xl:mt-14 lg:mt-12 md:mt-10 mt-5 bg-[#D8D8D8] w-full h-[1px]"> </div>
             <div className="xl:my-7 lg:my-6 md:my-5 my-4 flex flex-col sm:flex-row items-center justify-between ">
-               <p className="text-[#888AA0] description-2 mt-3 sm:mt-0">
+               <p className="text-[#000000] description-2 mt-3 sm:mt-0">
                   Copyright © {currentYear || new Date().getFullYear()} All rights
                   reserved | Developed By <Link className="text-primary" href="/https://zaman-it.com/">ZAMAN IT</Link>
                </p>

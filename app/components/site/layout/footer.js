@@ -114,7 +114,7 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-5 xl:gap-[120px] lg:gap-[100px] sm:gap-12 gap-4 xl:mt-20 lg:mt-16 sm:mt-12 mt-8 xl:px-9 lg:px-8 sm:px-6 px-4">
             {navLinks.map((link, index) => (
-              <div key={index} className=" text-[#888AA0] description-1">
+              <div key={index} className=" text-[#000000] description-1">
                 <Link href={link.link} rel="noopener noreferrer">
                   {i18n?.t(link.name)}
                 </Link>
@@ -141,12 +141,12 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IconComponent className="text-[#888AA0] text-[12px] sm:text-xl lg:text-2xl hover:text-primary transition-all duration-300" />
+                  <IconComponent className="text-[#000000] text-[12px] sm:text-xl lg:text-2xl hover:text-primary transition-all duration-300" />
                 </Link>
               );
             })}
           </div>
-          <p className="text-[#888AA0] description-2 mt-3 sm:mt-0">
+          <p className="text-[#000000] description-2 mt-3 sm:mt-0">
             Copyright © {currentYear || new Date().getFullYear()} All rights
             reserved | Developed By <Link href="/https://zaman-it.com/">ZAMAN IT</Link>
           </p>
