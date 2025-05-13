@@ -10,7 +10,7 @@ import { useFetch } from "@/app/helper/hooks";
 import { fetchPageContent } from "@/app/helper/backend";
 import { columnFormatter } from "@/app/helper/utils";
 
-const AboutSection = ({ bgColor = "bg-[#ECFDF4]", aboutMore }) => {
+const AboutSection = ({ bgColor = "bg-[#FEF9E1]", aboutMore }) => {
   const i18n = useI18n();
   const [data, getData, loading] = useFetch(fetchPageContent, {}, false);
   useEffect(() => {
@@ -78,7 +78,7 @@ const AboutSection = ({ bgColor = "bg-[#ECFDF4]", aboutMore }) => {
             )}
           </div>
           <div className="absolute hidden xl:block -right-[110px] top-[198px] rounded-[30px]  z-50 -translate-y-1/2 bg-[#f4bd61] text-white text-center font-semibold text-lg p-[15px] rotate-[-270deg] border-[4px] border-white">
-            <div className=" text-[#ECFDF4] items-center justify-center text-3xl lg:text-[56px] font-bold">
+            <div className=" text-[#FEF9E1] items-center justify-center text-3xl lg:text-[56px] font-bold">
               {data?.content?.experience?.year_experiences}+{" "}
               <span className="description-1 relative bottom-3">
                 Year Of Working Experience{" "}
@@ -98,7 +98,7 @@ const AboutSection = ({ bgColor = "bg-[#ECFDF4]", aboutMore }) => {
             {i18n.t(data?.content?.title)}
           </h2>
           <p
-            className="description-2 text-[#888AA0]"
+            className="description-2 text-[#000000]"
             dangerouslySetInnerHTML={{
               __html: columnFormatter(data?.content?.description),
             }}

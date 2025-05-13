@@ -40,7 +40,7 @@ const Hero4 = ({ data: heroData }) => {
     );
   }
   return (
-    <div className="z-10 -mt-[120px] min-h-screen bg-[url('/herobg.jpg')] bg-cover  bg-no-repeat flex items-center overflow-hidden relative bg-[#ECFDF4] mb-12">
+    <div className="z-10 -mt-[120px] min-h-screen bg-[url('/herobg.jpg')] bg-cover  bg-no-repeat flex items-center overflow-hidden relative bg-[#FEF9E1] mb-12">
       <div className="w-[1320px] mx-auto px-4 sm:px-6  xl:px-0 ">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="max-w-[672px]">
@@ -57,15 +57,15 @@ const Hero4 = ({ data: heroData }) => {
               ></Image>
             </div>
 
-            <p className="mt-8 text-base leading-7 text-[#888AA0]">
+            <p className="mt-8 text-base leading-7 text-[#000000]">
               {columnFormatter(hero?.short_description)}
             </p>
 
             <div className="mt-8 flex gap-4 sm:gap-10 ">
-              <Link href="/quote">
+              <Link href="/contact">
                 <div className="flex items-center  gap-1 sm:gap-2 bg-[#F9A61A] hover:bg-[#f4bd61] duration-300 py-2 sm:py-4 px-4 sm:px-8 rounded-[10px]">
                   <p className="text-sm sm:text-lg font-medium text-[#fff] whitespace-pre">
-                    Get a Quote
+                    Contact Us
                   </p>
                   <FaLongArrowAltRight className="text-xl text-[#fff] flex items-center mt-1" />
                 </div>
@@ -102,7 +102,7 @@ const Hero4 = ({ data: heroData }) => {
             <div className="flex gap-3 sm:gap-6 md::gap-8 justify-start items-center mt-14">
               {items.map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xl sm:text-2xl" />
+                  <FaCheckCircle className="text-[#f4bd61]-400 text-xl sm:text-2xl" />
                   <span className="text-gray-800 font-medium text-base sm:text-lg">
                     {item}
                   </span>
