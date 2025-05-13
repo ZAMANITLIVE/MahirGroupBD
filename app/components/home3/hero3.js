@@ -83,8 +83,8 @@ const Hero3 = ({ data: heroData }) => {
                   className="banner_link text-[#FFFFFF] flex items-center gap-2"
                 >
                   <div className="flex justify-between gap-2">
-                    <p className="text-[#888AA0]">{item?.icon}</p>
-                    <h1 className="description-2 capitalize -mt-1 text-[#888AA0] font-normal">
+                    <p className="text-[#000000]">{item?.icon}</p>
+                    <h1 className="description-2 capitalize -mt-1 text-[#000000] font-normal">
                       {item?.name}
                     </h1>
                     <GoArrowUpRight />
@@ -98,7 +98,7 @@ const Hero3 = ({ data: heroData }) => {
           <div className="lg:flex sm:flex items-start md:mt-5 gap-4 xl:gap-8">
             <div className="xl:flex-1 hidden md:block sm:w-[30%] mt-2 bg-white/20 h-[1px]"></div>
             <p
-              className="text-[#888AA0] desorption-2 sm:w-[70%] xl:flex-1"
+              className="text-[#000000] desorption-2 sm:w-[70%] xl:flex-1"
               dangerouslySetInnerHTML={{
                 __html: columnFormatter(hero?.description),
               }}
