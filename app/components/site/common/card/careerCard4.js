@@ -10,7 +10,7 @@ const CareerCard4 = ({ data }) => {
   const showTooltip = formattedContext.length > 200;
 
   return (
-    <div className="bg-[#ECFDF4] border-[#E8EAE8] rounded-xl max-w-[424px] 2xl:h-[424px] lg:h-[524px] lg:p-10 md:p-8 sm:p-6 p-10 w-full shadow-md flex flex-col border">
+    <div className="bg-[#FEF9E1] border-[#E8EAE8] rounded-xl max-w-[424px] 2xl:h-[424px] lg:h-[524px] lg:p-10 md:p-8 sm:p-6 p-10 w-full shadow-md flex flex-col border">
       {/* Top content */}
       <div className="flex-grow">
         <p className="text-[#333] text-lg font-medium mb-2 capitalize">
@@ -21,17 +21,17 @@ const CareerCard4 = ({ data }) => {
         </h3>
         {showTooltip ? (
           <Tooltip title={formattedContext}>
-            <h3 className="description-2 text-[#888AA0] mb-3 cursor-pointer">
+            <h3 className="description-2 text-[#000000] mb-3 cursor-pointer">
               {formattedContext.slice(0, 200)}...
             </h3>
           </Tooltip>
         ) : (
-          <h3 className="description-2 text-[#888AA0] mb-3">
+          <h3 className="description-2 text-[#000000] mb-3">
             {formattedContext}
           </h3>
         )}
 
-        <p className="description-1 text-[#888AA0] leading-relaxed mb-5">
+        <p className="description-1 text-[#000000] leading-relaxed mb-5">
           {dayjs(data?.deadline).format("DD MMM YYYY")}
         </p>
       </div>

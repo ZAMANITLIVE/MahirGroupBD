@@ -27,19 +27,19 @@ const ServiceCard4 = ({ data }) => {
 
         {showTooltip ? (
           <Tooltip title={fullText}>
-            <p className="description-1 text-[#888AA0] md:mt-3 mt-2 cursor-pointer">
+            <p className="description-1 text-[#000000] md:mt-3 mt-2 cursor-pointer">
               {displayText}...
             </p>
           </Tooltip>
         ) : (
-          <p className="description-1 text-[#888AA0] md:mt-3 mt-2">
+          <p className="description-1 text-[#000000] md:mt-3 mt-2">
             {fullText}
           </p>
         )}
       </div>
       <div className="px-6 pb-6  ">
         <Link href={`/service/${data?._id}`}>
-          <button className="px-8 py-4  bg-[#31D692] group-hover:bg-[#0DBC79] text-white rounded-lg text-base font-medium transition duration-300">
+          <button className="px-8 py-4  bg-[#f4bd61] group-hover:bg-[#F9A61A] text-white rounded-lg text-base font-medium transition duration-300">
             {i18n.t("View Details")}
           </button>
         </Link>

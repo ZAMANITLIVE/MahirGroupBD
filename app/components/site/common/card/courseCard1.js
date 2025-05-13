@@ -21,7 +21,7 @@ const CourseCard = ({ product = {}, color, theme }) => {
         <div className="flex justify-between items-center">
           <div className="text-xl flex items-center gap-2">
             <AiFillStar className="text-[#D5CF47]" />{" "}
-            <span className={`description-3 text-[#888AA0] ${theme === 'theme3' ? 'group-hover:text-white' : ''}`}>4.8</span>
+            <span className={`description-3 text-[#000000] ${theme === 'theme3' ? 'group-hover:text-white' : ''}`}>4.8</span>
           </div>
           <p
             className={`shadow-custom-light ${theme === 'theme2' ? 'bg-primary' : theme === 'theme3' ? 'border border-primary ' : ''}  text-${color} font-semibold desertion-1 rounded-md px-5 py-[10px]`}
@@ -37,7 +37,7 @@ const CourseCard = ({ product = {}, color, theme }) => {
           <hr className="mt-2 border-White_Color border-opacity-10" />
           <div className="mt-4 pt-2 flex items-center justify-between">
             <div>
-              <p className={`description-1 font-normal text-[#888AA0] ${theme === 'theme3' ? 'group-hover:text-white' : ''}`}>
+              <p className={`description-1 font-normal text-[#000000] ${theme === 'theme3' ? 'group-hover:text-white' : ''}`}>
                 20+ Course
               </p>
             </div>

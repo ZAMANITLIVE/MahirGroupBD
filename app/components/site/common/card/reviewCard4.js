@@ -4,7 +4,7 @@ import React from "react";
 
 const ReviewCard4 = ({ data }) => {
   return (
-    <div className="xl:p-5 lg:p-4 p-3 w-full border bg-[#ECFDF4] h-200px] md:h-[260px]  flex flex-col rounded-[20px]">
+    <div className="xl:p-5 lg:p-4 p-3 w-full border bg-[#FEF9E1] h-200px] md:h-[260px]  flex flex-col rounded-[20px]">
       <Rate className="text-primary text-sm lg:text-base" disabled value={data?.rating} allowHalf />
       <p className="mt-3 md:mt-3 lg:mt-5 text-[#333] description-1">
         {data?.comment?.length > 100 ? (
@@ -41,7 +41,7 @@ const ReviewCard4 = ({ data }) => {
           <h1 className="heading-5 !font-normal text-[#333333]">
             {data?.user?.name || "Unknown"}
           </h1>
-          <h5 className="description-2 font-normal text-[#888AA0]">
+          <h5 className="description-2 font-normal text-[#000000]">
             {data?.user?.country || "Anonymous"}
           </h5>
         </div>

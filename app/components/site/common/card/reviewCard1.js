@@ -8,7 +8,7 @@ const ReviewCard1 = ({ item = {} }) => {
   return (
     <div className="pt-10 w-full">
       <div className='bg-[url("/review1/Vector-7.png")] bg-[length:100%_100%] lg:pb-8 pb-12 bg-no-repeat w-full !h-[250px]'>
-        <div className="text-[#888AA0] relative p-5 md:p-8 lg:p-10">
+        <div className="text-[#000000] relative p-5 md:p-8 lg:p-10">
           <Image
             className="w-14 absolute -top-5 lg:-top-8 px-2 lg:px-0 sm:left-8 lg:left-[30px] xl:left-[45px] bg-white"
             src="/review1/quote.png"
@@ -25,7 +25,7 @@ const ReviewCard1 = ({ item = {} }) => {
                 defaultValue={item?.rating}
               />
             </div>
-            <h1 className="description-3 text-[#888AA099]">
+            <h1 className="description-3 text-[#00000099]">
               ({item.rating} {i18n.t("Rating")})
             </h1>
           </div>
@@ -63,7 +63,7 @@ const ReviewCard1 = ({ item = {} }) => {
           <h1 className="heading-3 font-medium text-[#02050A]">
             {item?.user?.name || "Unknown"}
           </h1>
-          <h5 className="description-2 font-normal text-[#888AA0]">
+          <h5 className="description-2 font-normal text-[#000000]">
             {item?.user?.country || "Anonymous"}
           </h5>
         </div>

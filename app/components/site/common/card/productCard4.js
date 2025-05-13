@@ -19,11 +19,11 @@ const ProductCard4 = ({ data }) => {
             alt="Image"
             className="w-full h-[250px] md:w-[384px] md:h-[310px] rounded-[20px] object-cover group-hover:scale-105 transform duration-300"
          />
-         {/* <h3 className="description-2 text-[#888AA0] lg:mt-6 md:mt-5 mt-4">{columnFormatter(data?.category?.name)}</h3> */}
+         {/* <h3 className="description-2 text-[#000000] lg:mt-6 md:mt-5 mt-4">{columnFormatter(data?.category?.name)}</h3> */}
          <p className="heading-4 text-[#333] mt-1">{data?.name}</p>
          {/* <div className="flex justify-between items-center lg:mt-5 md:mt-4 mt-3">
             <p className="heading-5 text-primary">{currency_symbol} {data?.price?.amount}</p>
-            <Link href={`/project/${data?._id}`} className="flex items-center justify-center gap-2 common-btn bg-[#31D692] group-hover:bg-[#0DBC79]  border border-primary/40 transform duration-300 ">
+            <Link href={`/project/${data?._id}`} className="flex items-center justify-center gap-2 common-btn bg-[#F4A434] group-hover:bg-[#FEF9E1]  border border-primary/40 transform duration-300 ">
                <p className="description-1 transform text-white">{i18n.t("View More")}</p>
                <FaArrowRightLong className="text-white transform duration-300" />
             </Link>

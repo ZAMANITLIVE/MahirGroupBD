@@ -17,7 +17,7 @@ const EventCard4 = ({ data, slug }) => {
         <div className="w-[24px] h-[4px] bg-[#4DB49C] -mt-1" />
         <p className="heading-2 !font-lexend mt-3 font-bold">
           {dayjs(data?.date).format("DD")}{" "}
-          <span className="text-[#888AA0] text-base -ml-2 font-inter">
+          <span className="text-[#000000] text-base -ml-2 font-inter">
             {" "}
             | {dayjs(data?.date).format("YYYY")}
           </span>{" "}
@@ -40,20 +40,20 @@ const EventCard4 = ({ data, slug }) => {
         <h3 className="heading-9 font-semibold text-[#333] -mt-2 !font-lexend">
           {columnFormatter(data?.title)}
         </h3>
-        <p className="text-lg text-[#888AA0] font-medium mb-2 capitalize">
+        <p className="text-lg text-[#000000] font-medium mb-2 capitalize">
           {data?.location} | {dayjs(data?.date).format("hh:mm A")}
         </p>
         <p
           dangerouslySetInnerHTML={{
             __html: columnFormatter(data?.description),
           }}
-          className="xl:mt-6  mt-4 description-2 text-[#888AA0] font-normal leading-6"
+          className="xl:mt-6  mt-4 description-2 text-[#000000] font-normal leading-6"
         ></p>
 
         <Divider className="my-6 text-[#E8EAE8]" />
-        <button className="flex items-center  hover:text-[#0DBC79] text-[#31D692] text-base font-semibold hover:underline">
+        <button className="flex items-center  hover:text-[#FEF9E1] text-[#F4A434] text-base font-semibold hover:underline">
           <Link href={`/events/${data?._id}`}>View Event Details </Link>{" "}
-          <FaArrowRightLong className="ml-1 text-[#0DBC79]" />
+          <FaArrowRightLong className="ml-1 text-[#FEF9E1]" />
         </button>
       </div>
       </div>

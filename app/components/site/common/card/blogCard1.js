@@ -33,7 +33,7 @@ const BlogCard = ({
       absolute top-4 left-4 xl:px-7 xl:py-3 lg:px-6 lg:py-[10px] sm:px-5 px-4 py-2 
       duration-300 border border-white font-inter 
       shadow-[0px_4px_25px_-1px_rgba(0,0,0,0.20)] backdrop-blur-[25px] 
-      group-hover:bg-[#55E6A5] group-hover:border-transparent group-hover:backdrop-blur-0 
+      group-hover:bg-[#F4A434] group-hover:border-transparent group-hover:backdrop-blur-0 
       ${radius}
     `}
         >
@@ -64,16 +64,16 @@ const BlogCard = ({
         </div>
         <div className="md:mt-6 md:text-sm lg:text-xl ">
           <div
-            className={`flex flex-col lg:flex-row items-center justify-between mt-4 description-2 text-[#888AA0] !font-normal `}
+            className={`flex flex-col lg:flex-row items-center justify-between mt-4 description-2 text-[#000000] !font-normal `}
           >
             <div className="flex items-center gap-2">
               <BsCalendar4Week
-                className={`text-[#888AA0] ${
+                className={`text-[#000000] ${
                   theme === "theme3" ? "group-hover:text-white" : ""
                 }`}
               />
               <h3
-                className={`text-[#888AA0] ${
+                className={`text-[#000000] ${
                   theme === "theme3" ? "group-hover:text-white" : ""
                 }`}
               >

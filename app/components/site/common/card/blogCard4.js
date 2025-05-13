@@ -74,7 +74,7 @@ const BlogCard4 = ({ data, index, page }) => {
                       </span>
                     </Tooltip>
                   </h3>
-                  <Link href={`blog/${data?._id}`} className="md:w-[30%] w-[40%] common-btn bg-[#31D692] hover:bg-[#0DBC79] duration-300 text-white flex items-center gap-2 description-1">
+                  <Link href={`blog/${data?._id}`} className="md:w-[30%] w-[40%] common-btn bg-[#F4A434] hover:bg-[#FEF9E1] duration-300 text-white flex items-center gap-2 description-1">
                     {i18n.t("Read More")}
                     <FaArrowRightLong className="text-base" />
                   </Link>
@@ -83,7 +83,7 @@ const BlogCard4 = ({ data, index, page }) => {
             </div>
           ) : (
             <div className={`${page === 'blog' ? '' : "xl:p-6 lg:p-5 md:p-4 p-4"} `}>
-              <h3 className="text-[#888AA0] description-2">{dayjs(data?.createdAt).format("MMM D, YYYY")}</h3>
+              <h3 className="text-[#000000] description-2">{dayjs(data?.createdAt).format("MMM D, YYYY")}</h3>
               <h3 className={`text-[#333333] heading-5 transform-all duration-500 mt-4`}>
                 <Tooltip
                   title={
@@ -99,7 +99,7 @@ const BlogCard4 = ({ data, index, page }) => {
                   </span>
                 </Tooltip>
               </h3>
-              <h3 className={`text-[#888AA0] description-2 mt-4`} >
+              <h3 className={`text-[#000000] description-2 mt-4`} >
                 <Tooltip
                   title={
                     columnFormatter(data?.short_description)?.length > 75

@@ -19,7 +19,7 @@ const TeamCard4 = ({ data }) => {
                className="w-full h-[250px] md:w-[280px] md:h-[296px] md:rounded-[20px] rounded-[10px] object-fill group-hover:scale-105 transform duration-300"
             />
             <h3 className="heading-5 font-normal text-[#333] group-hover:text-primary duration-300 lg:mt-6 md:mt-5 mt-4 text-center">{data?.name}</h3>
-            <p className="description-2 text-[#888AA0] mt-1 text-center">{columnFormatter(data?.expert?.name)}</p>
+            {/* <p className="description-2 text-[#000000] mt-1 text-center">{columnFormatter(data?.expert?.name)}</p> */}
          </Link>
          <div className="flex justify-center items-center md:gap-4 gap-3 md:mt-3 mt-2 pb-1">
             <Link href={data?.instagram_url}><FaTwitter className="text-[#333333] hover:text-primary transform-all duration-300 text-xl" /> </Link>

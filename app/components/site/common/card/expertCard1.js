@@ -32,7 +32,7 @@ const ExpertCard1 = ({ data, theme }) => {
         height={1000}
         alt="image"
       />
-      <div className="translation-transform duration-300 ease-in-out absolute bottom-0 group-hover:z-20 rounded-t-full bg-[#55E6A5] left-0">
+      <div className="translation-transform duration-300 ease-in-out absolute bottom-0 group-hover:z-20 rounded-t-full bg-[#F4A434] left-0">
         <div className="flex flex-col items-center justify-center lg:gap-8 gap-4 px-4 lg:px-6 text-2xl mt-16 md:mt-6 lg:mt-16 md:text-2xl mb-4 lg:mb-8">
           {socialLinks.map(({ icon, link, key }) => (
             <Link
@@ -61,7 +61,7 @@ const ExpertCard1 = ({ data, theme }) => {
             <span>{data?.name}</span>
           )}
         </h1>
-        <h5 className="text-[#888AA0] description-2 font-normal hidden group-hover:block text-end absolute md:-bottom-3 lg:-bottom-0 right-0 p-3">
+        <h5 className="text-[#000000] description-2 font-normal hidden group-hover:block text-end absolute md:-bottom-3 lg:-bottom-0 right-0 p-3">
           {columnFormatter(data?.expert?.name)}
         </h5>
       </div>

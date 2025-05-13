@@ -17,14 +17,14 @@ const PriceCard1 = ({ item = {} }) => {
 
                   
                   <div className='shadow-custom-light transition-all ease-in-out duration-300 py-2 md:py-3 lg:py-4 '>
-                        <div className='heading-2 text-center text-[#888AA0] group-hover:text-primary'>{item.title}</div>
+                        <div className='heading-2 text-center text-[#000000] group-hover:text-primary'>{item.title}</div>
                   </div>
                   <div className='opacity-0 group-hover:opacity-100 shadow-custom-light transition-all ease-in-out duration-300 w-full h-5'>
                         <br />
                   </div>
                   <div className="">
                         <h1 className='heading-6 text-center text-[#02050A] mt-5 md:mt-6 lg:mt-8 xl:mt-10'>
-                              ${item.price} <span className='description-2 text-[#888AA0] ps-2'>/Month</span>
+                              ${item.price} <span className='description-2 text-[#000000] ps-2'>/Month</span>
                         </h1>
                         <ul className='sm:mt-6 mt-5 lg:mt-8 xl:mt-10 flex flex-col items-center justify-center'>
                               {items.map((item) => (
@@ -32,7 +32,7 @@ const PriceCard1 = ({ item = {} }) => {
                                           <span className='rounded-full border border-primary p-[2px]'>
                                                 <FiCheck className='text-primary text-xs' />
                                           </span>
-                                          <p className='ml-2 sm:ml-3 text-[#888AA0] description-2 font-normal'>{item.title}</p>
+                                          <p className='ml-2 sm:ml-3 text-[#000000] description-2 font-normal'>{item.title}</p>
                                     </li>
                               ))}
                         </ul>

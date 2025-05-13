@@ -17,21 +17,21 @@ const EventCard = ({ data, slug }) => {
             <div className='flex xl:gap-14 lg:gap-12 md:gap-3 sm:gap-3 gap-2'>
                <div className='flex gap-1 sm:gap-2 lg:gap-3'>
                   <CiClock2 className='text-primary text-base lg:text-xl' />
-                  <p className='description-2 font-normal text-[#888AA0]'>{dayjs(data?.date).format("DD MMM YYYY") }</p>
+                  <p className='description-2 font-normal text-[#000000]'>{dayjs(data?.date).format("DD MMM YYYY") }</p>
                </div>
                <div className='flex gap-1 sm:gap-2 lg:gap-3'>
                   <FaLocationDot className='text-primary text-base lg:text-xl' />
-                  <p className='description-2 font-normal text-[#888AA0]'>{data?.location}</p>
+                  <p className='description-2 font-normal text-[#000000]'>{data?.location}</p>
                </div>
             </div>
          </div>
          <h2 className='xl:mt-8 lg:mt-7 md:mt-5 mt-4 heading-2 text-white'>{columnFormatter(data?.title)}</h2>
-         <p dangerouslySetInnerHTML={{__html:columnFormatter(data?.description)}} className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#888AA0] font-normal leading-6'>
+         <p dangerouslySetInnerHTML={{__html:columnFormatter(data?.description)}} className='lg:mt-6 md:mt-5 mt-4 description-2 text-[#000000] font-normal leading-6'>
             
          </p>
          {
             slug === 'blog' && (
-               <button className='transform duration-300 group-hover:text-[#02050A] mt-4 learn-btn bg-[#55E6A5] text-white flex items-center justify-center gap-1 md:gap-2'>
+               <button className='transform duration-300 group-hover:text-[#02050A] mt-4 learn-btn bg-[#F4A434] text-white flex items-center justify-center gap-1 md:gap-2'>
                   <Link href={`/events/${data?._id}`}>Learn More</Link>
                   <GoArrowUpRight className=' text-xl font-bold group-hover:rotate-45 transform duration-300' />
                </button>
