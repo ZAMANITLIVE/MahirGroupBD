@@ -18,10 +18,10 @@
     }
 
     .nav-link {
-      @apply flex items-center gap-4 pl-6 pr-2 py-2.5 text-sm text-[#8D97AD] hover:text-[#22F55D] hover:bg-gray-400 hover:border-[#888AA0] hover:border-l-[12px] hover:border-r-[12px] hover:rounded-md hover:transition-all hover:duration-300 hover:ease-in-out relative;
+      @apply flex items-center gap-4 pl-6 pr-2 py-2.5 text-sm text-[#8D97AD] hover:text-[#22F55D] hover:bg-gray-400 hover:border-[#000000] hover:border-l-[12px] hover:border-r-[12px] hover:rounded-md hover:transition-all hover:duration-300 hover:ease-in-out relative;
 
       &.active {
-        @apply text-[#22F55D] bg-gray-400 border-[#888AA0] border-l-[12px] border-r-[12px] rounded-md;
+        @apply text-[#22F55D] bg-gray-400 border-[#000000] border-l-[12px] border-r-[12px] rounded-md;
       }
 
       &.has-arrow::after {
@@ -42,7 +42,7 @@
   }
 
     .nav-link-sub {
-      @apply flex items-center gap-4 pl-6 pr-2 py-2.5 text-sm text-[#8D97AD] hover:text-[#22F55D] hover:bg-gray-400 hover:border-[#888AA0] hover:border-l-[12px] hover:border-r-[12px] hover:rounded-md hover:transition-all hover:duration-300 hover:ease-in-out relative;
+      @apply flex items-center gap-4 pl-6 pr-2 py-2.5 text-sm text-[#8D97AD] hover:text-[#22F55D] hover:bg-gray-400 hover:border-[#000000] hover:border-l-[12px] hover:border-r-[12px] hover:rounded-md hover:transition-all hover:duration-300 hover:ease-in-out relative;
 
       &.active {
         @apply rounded-s-md;
