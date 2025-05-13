@@ -55,7 +55,7 @@ const Blogs2 = ({ radius = "", color = "#02050A", theme, userBackground }) => {
             </h1>
             <Link
               href={"/blog"}
-              className="flex items-center gap-2 justify-end text-[#888AA0] font-normal description-2 whitespace-pre -mt-4 sm:mt-0"
+              className="flex items-center gap-2 justify-end text-[#000000] font-normal description-2 whitespace-pre -mt-4 sm:mt-0"
             >
               <span text={"text-black whitespace-pre"}>{(i18n.t("View More"))}</span>
               <FaArrowRightLong className="hidden sm:block text-black" />

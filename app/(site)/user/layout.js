@@ -95,7 +95,7 @@ const Layout = ({ children }) => {
                         <li key={item.id}>
                           <Link
                             href={item.href}
-                            className={`flex items-center p-[8px] sm:p-[18px] border border-white/10 rounded transition-colors duration-200 font-poppins ${pathname === item.href ? "text-primary" : "text-[#888AA0]  hover:text-primary"
+                            className={`flex items-center p-[8px] sm:p-[18px] border border-white/10 rounded transition-colors duration-200 font-poppins ${pathname === item.href ? "text-primary" : "text-[#000000]  hover:text-primary"
                               }`}
                           >
                             <span className="description-1 mr-2">{item.icon}</span>
@@ -137,7 +137,7 @@ const Layout = ({ children }) => {
                         <li key={item.id}>
                           <Link
                             href={item.href}
-                            className={`flex items-center p-[8px] sm:p-[18px] border border-white/10 rounded font-poppins transition-colors duration-200 ${pathname === item.href ? "text-primary" : "text-[#888AA0] hover:text-primary"
+                            className={`flex items-center p-[8px] sm:p-[18px] border border-white/10 rounded font-poppins transition-colors duration-200 ${pathname === item.href ? "text-primary" : "text-[#000000] hover:text-primary"
                               }`}
                           >
                             <span className="description-1 mr-2">{item.icon}</span>
@@ -145,7 +145,7 @@ const Layout = ({ children }) => {
                           </Link>
                         </li>
                       ))}
-                      <li className="hover:text-primary text-[#888AA0]">
+                      <li className="hover:text-primary text-[#000000]">
                         <button
                           onClick={() => {
                             localStorage.removeItem("token");

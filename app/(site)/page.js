@@ -156,7 +156,7 @@ export default function Home() {
             }}
           >
             <Hero3 data={data} bgColor="bg-[#070713]" textColor="text-[#ffffff]" />
-            <Partner bgColor='bg-[#ECFDF4]' />
+            <Partner bgColor='bg-[#FEF9E1]' />
             <About2 theme="theme3" />
             <Service theme="theme3" />
             <CaseStudy theme="theme3" />
@@ -177,12 +177,12 @@ export default function Home() {
 
       {theme === "four" && (
         <>
-          <div className="bg-[#ECFDF4] ">
+          <div className="bg-[#FEF9E1] ">
             <Hero4 data={data} />
           </div>
           <Partner
             bgOpacity="bg-opacity-100"
-            bgColor="bg-[#ECFDF4]"
+            bgColor="bg-[#FEF9E1]"
             theme="theme4"
           />
           <AboutSection />
@@ -192,7 +192,7 @@ export default function Home() {
             
             
             <Team4 />
-            <div className="bg-[#ECFDF4] w-full xl:py-14 lg:py-12 md:py-10 sm:py-8 py-6">
+            <div className="bg-[#FEF9E1] w-full xl:py-14 lg:py-12 md:py-10 sm:py-8 py-6">
               <Blog4 />
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Home() {
       )}
 
       <div className="modal-wrapper dashboardModal">
-        <Modal
+        {/* <Modal
           open={isModalVisible}
           onCancel={handleClose}
           footer={null}
@@ -226,7 +226,7 @@ export default function Home() {
               </div>
             )}
           </div>
-        </Modal>
+        </Modal> */}
       </div>
     </main>
   );
