@@ -65,7 +65,7 @@ const Footer4 = () => {
       },
    ];
    return (
-      <div className="bg-[#FEF9E1] w-full xl:pt-10 lg:pt-9 md:pt-7 pt-5 pb-1">
+      <div className="bg-[#ffffff] w-full xl:pt-10 lg:pt-9 md:pt-7 pt-5 pb-1">
          <div className="agency-container">
             <div className="flex flex-col sm:flex-row justify-center gap-3 lg:gap-0">
                <div className="w-full sm:w-[45%]">
