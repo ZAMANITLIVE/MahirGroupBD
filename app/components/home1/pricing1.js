@@ -24,7 +24,7 @@ const Pricing1 = () => {
             <div className="agency-container">
                   <div className="md:flex justify-between items-center gap-5 lg:gap-10 xl:gap-20 2xl:gap-[150px]">
                         <h1 className='heading-2 text-[#02050A] font-semibold whitespace-pre'>The Right  pricing plan</h1>
-                        <p className='text-[#888AA0] description-2 mt-3 md:mt-0'>Creative agencies are businesses that specialize in creating and with on a executing mark creative agencies  businesses that specialize need more than</p>
+                        <p className='text-[#000000] description-2 mt-3 md:mt-0'>Creative agencies are businesses that specialize in creating and with on a executing mark creative agencies  businesses that specialize need more than</p>
                   </div>
                   <div className="lg:mt-10 sm:mt-8 mt-6 xl:mt-12 2xl:mt-[60px] grid lg:grid-cols-3 sm:grid-cols-3 grid-cols-1 gap-5 ">
                         {
