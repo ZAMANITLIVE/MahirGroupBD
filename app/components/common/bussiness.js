@@ -100,7 +100,7 @@ const Business = ({ theme, exploreBtn }) => {
         </div>
         <div className="lg:w-1/3 md:w-1/2 banner_paragraph text-white mt-[20%] md:mt-0 lg:mt-0 flex flex-col justify-center items-center">
           <p
-            className="description-2 text-[#888AA0] capitalize"
+            className="description-2 text-[#000000] capitalize"
             dangerouslySetInnerHTML={{
               __html: columnFormatter(data?.content?.description),
             }}
@@ -111,8 +111,8 @@ const Business = ({ theme, exploreBtn }) => {
                 <ExploreBtn
                   theme={theme}
                   link="about"
-                  iconColor={"#55E6A5"}
-                  textColor={"#888AA0"}
+                  iconColor={"#F4A434"}
+                  textColor={"#000000"}
                 />
               </div>
             )
