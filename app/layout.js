@@ -4,7 +4,7 @@ import Providers from "./provider/userProvider";
 import "./styles/globals.scss";
 
 export const metadata = {
-  title: "Mahir Group - The largest accessories & trims manufacturer in Bangladesh",
+  title: "Mahir Group BD",
   description:
     "Delivering excellence in garment accessories with quality and innovation.",
 };
