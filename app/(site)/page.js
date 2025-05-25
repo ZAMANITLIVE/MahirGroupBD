@@ -31,6 +31,12 @@ import CaseStudy4 from "../components/home4/caseStudy4";
 import Testimonials4 from "../components/home4/testimonials4";
 import Team4 from "../components/home4/team4";
 import Blog4 from "../components/home4/blog4";
+import ZoomSlider from "@/app/components/home4/ZoomSlider";
+import ClientsSection from "../components/home4/ClientsSection";
+import Certification from "../components/home4/Certification";
+import VideoSection from "../components/home4/VideoSection";
+import AboutUsSection from "../components/home4/AboutUsSection";
+
 
 export default function Home() {
   const [data, getData, { loading }] = useFetch(fetchPageContentTheme1, {
@@ -177,20 +183,27 @@ export default function Home() {
 
       {theme === "four" && (
         <>
-          <div className="bg-[#FEF9E1] ">
+
+          <ZoomSlider />
+          {/* <div className="bg-[#FEF9E1] ">
             <Hero4 data={data} />
-          </div>
-          <Partner
-            bgOpacity="bg-opacity-100"
-            bgColor="bg-[#FEF9E1]"
-            theme="theme4"
-          />
+          </div> */}
+
+
           <AboutSection />
           <div className="py-20 flex flex-col items-center justify-center xl:gap-36 lg:gap-32 md:gap-24 sm:gap-16 gap-12">
-            <Service4 />
+            <Partner
+              bgOpacity="bg-opacity-100"
+              bgColor="bg-[#ffffff]"
+              theme="theme4"
+            />
+            {/* <Service4 /> */}
             <Product4 />
-            
-            
+            <AboutUsSection/>
+            <VideoSection/>
+            <ClientsSection/>
+            <Certification/>
+
             <Team4 />
             <div className="bg-[#FEF9E1] w-full xl:py-14 lg:py-12 md:py-10 sm:py-8 py-6">
               <Blog4 />
@@ -231,3 +244,4 @@ export default function Home() {
     </main>
   );
 }
+
