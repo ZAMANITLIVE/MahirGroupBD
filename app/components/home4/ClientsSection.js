@@ -18,7 +18,7 @@ const clients = [...visibleClients, ...visibleClients]; // duplicated for loopin
 
 export default function ClientsSection() {
   return (
-    <section className="w-full py-12 bg-[#FEF9E1] text-center">
+    <section className="w-full py-12 bg-[#ffffff] text-center">
       <h2 className="text-3xl font-semibold text-gray-800 mb-8">Our Partners
       </h2>
 
