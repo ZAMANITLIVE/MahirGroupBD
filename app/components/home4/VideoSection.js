@@ -18,7 +18,7 @@ export default function VideoSection() {
             loading="lazy"
           />
           <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            href="https://youtu.be/afMvY7S4Ddo"
             target="_blank"
             rel="noopener noreferrer"
             className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition duration-300"
