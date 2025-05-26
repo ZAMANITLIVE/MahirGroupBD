@@ -184,10 +184,7 @@ export default function Home() {
       {theme === "four" && (
         <>
 
-          // <ZoomSlider />
-          // {/* <div className="bg-[#FEF9E1] ">
-          //   <Hero4 data={data} />
-          // </div> */}
+        
 
 
           <AboutSection />
