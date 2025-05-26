@@ -200,11 +200,11 @@ export default function Home() {
             {/* <Service4 /> */}
             <Product4 />
             <AboutUsSection/>
-            
+            <VideoSection/>
+            <ClientsSection/>
+            <Certification/>
 
-            <Team4 />
-            <div className="bg-[#FEF9E1] w-full xl:py-14 lg:py-12 md:py-10 sm:py-8 py-6">
-              <Blog4 />
+           
             </div>
           </div>
         </>
