@@ -211,7 +211,7 @@ export default function Home() {
       )}
 
       <div className="modal-wrapper dashboardModal">
-        <Modal
+        {/* <Modal
           open={isModalVisible}
           onCancel={handleClose}
           footer={null}
@@ -237,7 +237,7 @@ export default function Home() {
               </div>
             )}
           </div>
-        </Modal>
+        </Modal> */}
       </div>
     </main>
   );
