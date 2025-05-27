@@ -219,7 +219,7 @@ const Navbar = ({
   return (
     <>
       <HeaderBar />
-      <div className={`w-full h-[120px] relative ${bgColor}`}>
+      <div className={`w-full h-[70px] md:h-[80px] lg:h-[90px] xl:h-[100px] relative ${bgColor}`}>
         <div className="agency-container pt-6 relative z-20">
           <nav className="flex items-center justify-between bg-transparent">
             <div className="flex items-center">
