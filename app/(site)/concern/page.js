@@ -11,7 +11,6 @@ const Concern = () => {
   return (
     
     <div className="p-4">
-      <MainLoader></MainLoader>
       <ConcernSection></ConcernSection>
     </div>
   );
