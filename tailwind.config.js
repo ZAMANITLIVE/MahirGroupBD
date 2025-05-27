@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         primary: "#F9A61A",
         textMain: "#02050A",
-        textBody: "#888AA0",
+        textBody: "#000000",
       },
       backgroundImage: {
         "gray-gradient":
@@ -80,11 +80,11 @@ module.exports = {
           },
         },
         rotateBorderColor: {
-          "0%": { borderColor: "#55E6A5" },
+          "0%": { borderColor: "#F4A434" },
           "25%": { borderColor: "#4C9B7B" },
           "50%": { borderColor: "#3A8C6C" },
           "75%": { borderColor: "#7DE6A5" },
-          "100%": { borderColor: "#55E6A5" },
+          "100%": { borderColor: "#F4A434" },
         },
       },
     },
