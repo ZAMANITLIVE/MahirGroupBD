@@ -31,12 +31,6 @@ import CaseStudy4 from "../components/home4/caseStudy4";
 import Testimonials4 from "../components/home4/testimonials4";
 import Team4 from "../components/home4/team4";
 import Blog4 from "../components/home4/blog4";
-import ZoomSlider from "@/app/components/home4/ZoomSlider";
-import ClientsSection from "../components/home4/ClientsSection";
-import Certification from "../components/home4/Certification";
-import VideoSection from "../components/home4/VideoSection";
-import AboutUsSection from "../components/home4/AboutUsSection";
-
 
 export default function Home() {
   const [data, getData, { loading }] = useFetch(fetchPageContentTheme1, {
@@ -162,7 +156,7 @@ export default function Home() {
             }}
           >
             <Hero3 data={data} bgColor="bg-[#070713]" textColor="text-[#ffffff]" />
-            <Partner bgColor='bg-[#FEF9E1]' />
+            <Partner bgColor='bg-[#ECFDF4]' />
             <About2 theme="theme3" />
             <Service theme="theme3" />
             <CaseStudy theme="theme3" />
@@ -183,35 +177,30 @@ export default function Home() {
 
       {theme === "four" && (
         <>
-
-          <ZoomSlider />
-          {/* <div className="bg-[#FEF9E1] ">
+          <div className="bg-[#ECFDF4] ">
             <Hero4 data={data} />
-          </div> */}
-
-
+          </div>
+          <Partner
+            bgOpacity="bg-opacity-100"
+            bgColor="bg-[#ECFDF4]"
+            theme="theme4"
+          />
           <AboutSection />
           <div className="py-20 flex flex-col items-center justify-center xl:gap-36 lg:gap-32 md:gap-24 sm:gap-16 gap-12">
-            <Partner
-              bgOpacity="bg-opacity-100"
-              bgColor="bg-[#ffffff]"
-              theme="theme4"
-            />
-            {/* <Service4 /> */}
+            <Service4 />
             <Product4 />
-            <AboutUsSection/>
-            <VideoSection/>
-            <ClientsSection/>
-            <Certification/>
-
-          
+            <CaseStudy4 />
+            <Testimonials4 />
+            <Team4 />
+            <div className="bg-[#ECFDF4] w-full xl:py-14 lg:py-12 md:py-10 sm:py-8 py-6">
+              <Blog4 />
             </div>
           </div>
         </>
       )}
 
       <div className="modal-wrapper dashboardModal">
-        {/* <Modal
+        <Modal
           open={isModalVisible}
           onCancel={handleClose}
           footer={null}
@@ -237,7 +226,7 @@ export default function Home() {
               </div>
             )}
           </div>
-        </Modal> */}
+        </Modal>
       </div>
     </main>
   );
