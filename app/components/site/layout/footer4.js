@@ -17,7 +17,9 @@ const Footer4 = () => {
     { name: "Contact", link: "/contact" },
     { name: "Blog", link: "/blog" },
     { name: "Careers", link: "/careers" },
-    { name: "Privacy Policy", link: "/privacy" },
+    { name: "BGAPMEA", link: "https://www.bgapmea.org/" },
+    { name: "BGMEA", link: "https://www.bgmea.com.bd/" },
+    { name: "EPB", link: "https://epb.gov.bd/" },
   ];
 
   const productCatalog = [
