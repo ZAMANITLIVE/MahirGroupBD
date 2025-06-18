@@ -88,7 +88,7 @@ const ContactPage4 = () => {
                 </div>
                 <div className="">
                   <Button type="submit" className="common-btn !bg-[#F4A434] hover:!bg-[#FEF9E1]">
-                   {loading ? "Sending..." : "Send Message"}
+                    {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </div>
               </Form>
@@ -104,7 +104,7 @@ const ContactPage4 = () => {
                 ></p>
                 <div className="mt-8 flex flex-col gap-3">
                   <div className="flex items-center lg:gap-4 md:gap-2 gap-2">
-                    <FaPhoneVolume className="text-[#333]  p-[10px] rounded-full bg-[#FEF9E1] hover:bg-primary" size={40}/>
+                    <FaPhoneVolume className="text-[#333]  p-[10px] rounded-full bg-[#FEF9E1] hover:bg-primary" size={40} />
                     <p className="description-2 text-[#000000] font-normal">
                       {setting?.site_phone}
                     </p>
@@ -155,9 +155,21 @@ const ContactPage4 = () => {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
+      {/* Google Map - Bottom */}
+        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 mb-12">
+          <div className="w-full h-[350px] md:h-[400px] lg:h-[450px] rounded-xl overflow-hidden shadow-lg border border-[#E8EAE8]">
+            <iframe
+              className="w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.0849831671167!2d90.40943167410272!3d23.815576886273384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c75c50a489f3%3A0x656f6f4447483775!2sMahir%20Group%20(Head%20office)!5e0!3m2!1sen!2sbd!4v1750250254601!5m2!1sen!2sbd"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
     </div>
   );
 };
