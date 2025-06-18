@@ -33,6 +33,22 @@ const slides = [
     cta: "Our Quality Promise",
     kenBurns: "animate-kenBurns3"
   },
+  {
+    id: 4,
+    image: "/slider4.jpg",
+    title: "Sustainable Solutions",
+    subtitle: "Eco-friendly processes for a better tomorrow.",
+    cta: "Our Green Mission",
+    kenBurns: "animate-kenBurns3"
+  },
+  {
+    id: 5,
+    image: "/slider5.jpg",
+    title: "Empowering Workforce",
+    subtitle: "Skilled teams driving manufacturing excellence.",
+    cta: "Meet Our Team",
+    kenBurns: "animate-kenBurns3"
+  },
 ];
 
 const ZoomSlider = () => {
