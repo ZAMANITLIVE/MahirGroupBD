@@ -60,16 +60,20 @@ const Navbar = ({
       label: "About",
       children: [
         {
-          label: "Chairman",
-          key: "/chairman",
+          label: "Board of Directors",
+          key: "/board-of-directors",
         },
         {
-          key: "/md",
-          label: "MD",
+          key: "/management-team",
+          label: "Management Team",
         },
         {
-          key: "/director",
-          label: "Director",
+          key: "/our-mission/vision",
+          label: "Our Mission/Vision",
+        },
+        {
+          key: "/History",
+          label: "history",
         },
 
       ],
