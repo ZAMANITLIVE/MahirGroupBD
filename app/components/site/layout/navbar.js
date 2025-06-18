@@ -82,16 +82,28 @@ const Navbar = ({
       label: "Concern",
       children: [
         {
-          label: "C1",
-          key: "/c1",
+          label: "Netrakona Accessories Ltd",
+          key: "/netrakona-accessories-ltd",
         },
         {
-          key: "/c2",
-          label: "C2",
+          key: "/pack-asia-BD-ltd",
+          label: "Pack Asia BD Ltd",
         },
         {
-          key: "/c3",
-          label: "C3",
+          key: "/o-pack-bd-ltd",
+          label: "O Pack BD Ltd",
+        },
+        {
+          label: "Trade Max",
+          key: "/trade-max",
+        },
+        {
+          key: "/mahir-steeltech-Ltd",
+          label: "Mahir Steeltech Ltd",
+        },
+        {
+          key: "/m-n-quality-agro",
+          label: "M N Quality Agro",
         },
 
       ],
