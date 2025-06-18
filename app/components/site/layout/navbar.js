@@ -72,8 +72,8 @@ const Navbar = ({
           label: "Our Mission/Vision",
         },
         {
-          key: "/History",
-          label: "history",
+          key: "/history",
+          label: "History",
         },
 
       ],
