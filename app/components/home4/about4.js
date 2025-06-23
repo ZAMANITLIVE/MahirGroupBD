@@ -9,85 +9,136 @@ import { useEffect } from "react";
 import { useFetch } from "@/app/helper/hooks";
 import { fetchPageContent } from "@/app/helper/backend";
 import { columnFormatter } from "@/app/helper/utils";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-const AboutSection = ({ bgColor = "bg-[#FEF9E1]", aboutMore }) => {
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
+const slideIn = {
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+const AboutSection = ({ bgColor = "bg-gradient-to-br from-[#FFFBE9] via-[#FEF9E1] to-[#FFE9B2]", aboutMore }) => {
   const i18n = useI18n();
   const [data, getData, loading] = useFetch(fetchPageContent, {}, false);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   useEffect(() => {
     getData({ slug: "about" });
   }, []);
 
   return (
-    <section className={`${bgColor} py-20 mt-12`}>
+    <motion.section
+      style={{ y }}
+      className={`${bgColor} py-20 mt-12 shadow-xl rounded-[32px]`}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
       <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 flex flex-col-reverse md:flex-row gap-6 items-center">
-        
-        {/* Left: Image Column with animation */}
+        {/* Left Image */}
         <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={1}
           className="flex flex-row gap-4 relative w-full justify-center md:justify-start mt-6 md:mt-0"
         >
           <div className="flex flex-col space-y-4">
-            <Image
-              src={data?.content?.image1 || "/home4/2.png"}
-              alt="Team 1"
-              className="rounded-lg w-[270px] h-[240px] object-cover"
-              width={270}
-              height={240}
-            />
-            <Image
-              src={data?.content?.image2 || "/home4/3.png"}
-              alt="Team 2"
-              className="rounded-lg w-[270px] h-[240px] object-cover"
-              width={270}
-              height={240}
-            />
+            {[data?.content?.image1 || "/home4/2.png", data?.content?.image2 || "/home4/3.png"].map((img, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="shadow-lg rounded-xl overflow-hidden"
+              >
+                <Image
+                  src={img}
+                  alt={`Team ${idx + 1}`}
+                  className="w-[270px] h-[240px] object-cover"
+                  width={270}
+                  height={240}
+                />
+              </motion.div>
+            ))}
           </div>
-          <div className="w-[270px] h-[498px]">
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="relative w-[270px] h-[498px] shadow-xl rounded-xl overflow-hidden"
+          >
             <Image
               src={data?.content?.image || "/home4/1.png"}
               alt="Main Team"
-              className="rounded-lg w-[270px] h-[498px] object-cover"
+              className="w-[270px] h-[498px] object-cover"
               width={270}
               height={498}
             />
-          </div>
-          <div className="absolute hidden xl:block -right-[110px] top-[198px] rounded-[30px] z-50 -translate-y-1/2 bg-[#f4bd61] text-white text-center font-semibold text-lg p-[15px] rotate-[-270deg] border-[4px] border-white">
-            <div className="text-[#FEF9E1] items-center justify-center text-3xl lg:text-[56px] font-bold">
-              {data?.content?.experience?.year_experiences}+{" "}
-              <span className="description-1 relative bottom-3">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="absolute bottom-4 left-4 bg-[#f4bd61] text-white px-4 py-3 rounded-[20px] shadow-lg text-lg font-bold flex flex-col leading-tight"
+            >
+              <span className="text-2xl lg:text-[32px]">
+                {data?.content?.experience?.year_experiences || 22}+
+              </span>
+              <span className="text-sm font-medium -mt-1">
                 Year Of Working Experience
               </span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
-        {/* Right: Text Content with animation */}
+        {/* Right Text */}
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={2}
           className="w-full"
         >
           <div className="md:-ml-[54px] flex md:block items-center justify-center md:items-start md:justify-start">
             <SectionHeader align="left" maxWidth="max-w-[70px]" title="About US" />
           </div>
 
-          <h2 className="text-3xl text-center md:text-left font-lexend md:text-4xl -mt-4 lg:text-[48px] font-bold mb-4 text-[#333] lg:leading-[110%]">
+          <motion.h2
+            variants={slideIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-3xl text-center md:text-left font-lexend md:text-4xl -mt-4 lg:text-[48px] font-bold mb-4 text-[#333] lg:leading-[110%]"
+          >
             {i18n.t(data?.content?.title)}
-          </h2>
+          </motion.h2>
 
-          <p
+          <motion.p
+            variants={slideIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="description-2 text-[#000000]"
             dangerouslySetInnerHTML={{
               __html: columnFormatter(data?.content?.description),
             }}
-          ></p>
+          ></motion.p>
 
           {!aboutMore && (
             <Link
@@ -98,9 +149,8 @@ const AboutSection = ({ bgColor = "bg-[#FEF9E1]", aboutMore }) => {
             </Link>
           )}
 
-          {/* Info Cards */}
-          <div className="mt-14 flex flex-row justify-between gap-4">
-            <div className="flex gap-2 lg:gap-4 items-center">
+          <motion.div className="mt-14 flex flex-row justify-between gap-4" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={3}>
+            <motion.div className="flex gap-2 lg:gap-4 items-center" whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
               {data?.content?.project?.iconImg1 && (
                 <Image
                   className="sm:w-14 w-12 h-12 sm:h-14"
@@ -118,9 +168,11 @@ const AboutSection = ({ bgColor = "bg-[#FEF9E1]", aboutMore }) => {
                   {i18n.t("Project Complete")}
                 </h4>
               </div>
-            </div>
+            </motion.div>
+
             <div className="border-l hidden sm:block border-l-[#4DB49C]" />
-            <div className="flex gap-2 lg:gap-4 items-center">
+
+            <motion.div className="flex gap-2 lg:gap-4 items-center" whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
               {data?.content?.experience?.iconImg2 && (
                 <Image
                   className="sm:w-14 w-12 h-12 sm:h-14"
@@ -138,11 +190,11 @@ const AboutSection = ({ bgColor = "bg-[#FEF9E1]", aboutMore }) => {
                   {i18n.t("Years of Experiences")}
                 </h4>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
