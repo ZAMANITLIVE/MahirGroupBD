@@ -26,25 +26,23 @@ const ImageGalleryPage4 = () => {
 
   const handleCategoryChange = (categoryId) => {
     setActiveTab(categoryId || "All");
-    getServices(
-      categoryId ? { category: categoryId } : { category: undefined }
-    );
+    getServices(categoryId ? { category: categoryId } : {});
   };
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <CommonBanner title="Image Gallery" textTitle="text-primary" />
+
       <div className="lg:py-[100px] md:py-20 sm:py-16 py-12 agency-container">
+        
+        {/* Tabs */}
         <div className="overflow-x-auto w-full pb-5 scrollbar-thin">
-          <div className="flex items-center justify-center gap-3 md:gap-4 lg:gap-6 min-w-max">
+          <div className="flex items-center justify-start lg:justify-center gap-3 md:gap-4 lg:gap-6 w-max min-w-full">
             <button
               onClick={() => handleCategoryChange(undefined)}
-              className={`common-btn border border-primary whitespace-pre px-4 py-2 
-                           ${
-                             activeTab === "All"
-                               ? "bg-primary text-black"
-                               : "text-[#000000]"
-                           }`}
+              className={`common-btn border border-primary whitespace-pre px-4 py-2 ${
+                activeTab === "All" ? "bg-primary text-black" : "text-[#000000]"
+              }`}
             >
               Show All
             </button>
@@ -52,12 +50,11 @@ const ImageGalleryPage4 = () => {
               <button
                 key={item?._id}
                 onClick={() => handleCategoryChange(item?._id)}
-                className={`common-btn border border-primary whitespace-pre px-4 py-2 
-                           ${
-                             activeTab === item?._id
-                               ? "bg-primary text-black"
-                               : "text-[#000000]"
-                           }`}
+                className={`common-btn border border-primary whitespace-pre px-4 py-2 ${
+                  activeTab === item?._id
+                    ? "bg-primary text-black"
+                    : "text-[#000000]"
+                }`}
               >
                 {columnFormatter(item?.name)}
               </button>
@@ -68,23 +65,23 @@ const ImageGalleryPage4 = () => {
         {/* Image Grid */}
         <div className="2xl:mt-[60px] xl:mt-14 lg:mt-10 md:mt-8 sm:mt-7 mt-6 grid grid-cols-2 sm:grid-cols-3 xl:gap-6 lg:gap-5 md:gap-4 sm:gap-3 gap-2">
           {activeImages?.length > 0 ? (
-            activeImages?.map((image, index) => (
+            activeImages.map((image, index) => (
               <div
                 key={index}
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer overflow-hidden w-full aspect-[4/3] bg-gray-100"
                 onClick={() => {
                   setCurrentIndex(index);
                   setPreviewVisible(true);
                 }}
               >
-                { image && (
+                {image && (
                   <Image
                     src={image}
                     alt={`Gallery ${index}`}
-                    width={500}
-                    height={400}
-                    className="!w-[422px] xl:!h-[388px] lg:!h-[288px] md:!h-[188px] !h-[100px] !object-fill"
                     preview={false}
+                    className="w-full h-full object-cover"
+                    width="100%"
+                    height="100%"
                   />
                 )}
               </div>
@@ -94,8 +91,8 @@ const ImageGalleryPage4 = () => {
           )}
         </div>
 
-        {/* Hidden Preview Group */}
-        { previewVisible && (
+        {/* Preview Group (hidden but functional) */}
+        {previewVisible && (
           <div className="hidden">
             <Image.PreviewGroup
               preview={{
@@ -105,9 +102,7 @@ const ImageGalleryPage4 = () => {
                 onChange: (newIndex) => setCurrentIndex(newIndex),
               }}
             >
-              { activeImages.map((image, index) => (
-                
-
+              {activeImages.map((image, index) => (
                 <Image
                   key={index}
                   src={image}
