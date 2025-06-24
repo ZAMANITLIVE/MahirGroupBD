@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutUsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-white">
+    <section className="py-16 sm:py-20 lg:py-28 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
           
@@ -16,7 +16,7 @@ export default function AboutUsSection() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] rounded-xl overflow-hidden shadow-lg group"
+            className="relative w-full max-w-full h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] rounded-xl overflow-hidden shadow-lg group"
           >
             <Image
               src="/clients/about-us.jpg"
@@ -25,6 +25,7 @@ export default function AboutUsSection() {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               quality={90}
               priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-black/5" />
           </motion.div>
@@ -104,7 +105,7 @@ export default function AboutUsSection() {
               className="pt-4"
             >
               <button className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-xl flex items-center gap-2">
-                Download Company Profile
+                Discover Our Capabilities
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
