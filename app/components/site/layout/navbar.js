@@ -10,8 +10,7 @@ import { RiMenuFill } from "react-icons/ri";
 import { useRouter } from "next/navigation";
 import { useUser } from "@/app/contexts/user";
 import { useI18n } from "@/app/contexts/i18n";
-import { GrLanguage } from "react-icons/gr";
-import HeaderBar from "@/app/(dashboard)/components/HeaderBar";
+import HeaderBar from "@/app/(dashboard)/admin/layout/HeaderBar";
 
 const Navbar = ({
   bgColor = "bg-transparent",
@@ -60,20 +59,16 @@ const Navbar = ({
       label: "About",
       children: [
         {
-          label: "Board of Directors",
-          key: "/board-of-directors",
+          label: "Chairman",
+          key: "/chairman",
         },
         {
-          key: "/management-team",
-          label: "Management Team",
+          key: "/md",
+          label: "MD",
         },
         {
-          key: "/our-mission/vision",
-          label: "Our Mission/Vision",
-        },
-        {
-          key: "/history",
-          label: "History",
+          key: "/director",
+          label: "Director",
         },
 
       ],
@@ -114,7 +109,7 @@ const Navbar = ({
     },
 
     {
-      key: "/project",
+      key: "/product",
       icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
       label: "Products",
       children: [
@@ -304,7 +299,7 @@ const Navbar = ({
 
               <RiMenuFill
                 onClick={() => setOpen(!open)}
-                className={`block ${textColor} lg:hidden`}
+                className={`block text-textMain lg:hidden`}
               />
               {open && (
                 <div
