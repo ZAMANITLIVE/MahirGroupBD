@@ -304,7 +304,7 @@ const Navbar = ({
 
               <RiMenuFill
                 onClick={() => setOpen(!open)}
-                className={`block ${textColor} lg:hidden`}
+                className={`block ${textColor} text-textMain lg:hidden`}
               />
               {open && (
                 <div
