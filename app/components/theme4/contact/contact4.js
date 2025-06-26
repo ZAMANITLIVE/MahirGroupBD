@@ -120,6 +120,11 @@ const ContactPage4 = () => {
       className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm resize-none"
     />
   </Form.Item>
+          <motion.div whileHover={{ scale: 1.03 }} className="mt-5">
+                  <Button type="submit" className="common-btn !bg-[#F4A434] hover:!bg-[#e08918] shadow-md w-full sm:w-auto">
+                    {loading ? "Sending..." : "Send Message"}
+                  </Button>
+                </motion.div>
 </Form>
 
             </motion.div>
