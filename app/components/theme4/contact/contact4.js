@@ -66,66 +66,62 @@ const ContactPage4 = () => {
             {/* Form Section */}
             <motion.div className="w-full sm:w-1/2 lg:w-3/5" variants={fadeUp} custom={1}>
               <Form layout="vertical" onFinish={handleSubmit} form={form}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <Form.Item
-                    label="Name"
-                    name="name"
-                    rules={[{ required: true, message: "Please enter your name" }]}
-                  >
-                    <input
-                      type="text"
-                      placeholder="Enter your name"
-                      className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm"
-                    />
-                  </Form.Item>
-                  <Form.Item
-                    label="Email"
-                    name="email"
-                    rules={[
-                      { required: true, message: "Please enter your email" },
-                      { type: "email", message: "Enter a valid email" },
-                    ]}
-                  >
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm"
-                    />
-                  </Form.Item>
-                </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <Form.Item
+      label={<span className="text-black">Name</span>}
+      name="name"
+      rules={[{ required: true, message: "Please enter your name" }]}
+    >
+      <input
+        type="text"
+        placeholder="Enter your name"
+        className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm"
+      />
+    </Form.Item>
 
-                <Form.Item
-                  label="Subject"
-                  name="subject"
-                  className="mt-3"
-                  rules={[{ required: true, message: "Please enter your subject" }]}
-                >
-                  <input
-                    type="text"
-                    placeholder="Enter subject"
-                    className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm"
-                  />
-                </Form.Item>
+    <Form.Item
+      label={<span className="text-black">Email</span>}
+      name="email"
+      rules={[
+        { required: true, message: "Please enter your email" },
+        { type: "email", message: "Enter a valid email" },
+      ]}
+    >
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm"
+      />
+    </Form.Item>
+  </div>
 
-                <Form.Item
-                  label="Message"
-                  name="message"
-                  className="mt-3"
-                  rules={[{ required: true, message: "Please enter your message" }]}
-                >
-                  <textarea
-                    rows={4}
-                    placeholder="Enter your message..."
-                    className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm resize-none"
-                  />
-                </Form.Item>
+  <Form.Item
+    label={<span className="text-black">Subject</span>}
+    name="subject"
+    className="mt-3"
+    rules={[{ required: true, message: "Please enter your subject" }]}
+  >
+    <input
+      type="text"
+      placeholder="Enter subject"
+      className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm"
+    />
+  </Form.Item>
 
-                <motion.div whileHover={{ scale: 1.03 }} className="mt-5">
-                  <Button type="submit" className="common-btn !bg-[#F4A434] hover:!bg-[#e08918] shadow-md w-full sm:w-auto">
-                    {loading ? "Sending..." : "Send Message"}
-                  </Button>
-                </motion.div>
-              </Form>
+  <Form.Item
+    label={<span className="text-black">Message</span>}
+    name="message"
+    className="mt-3"
+    rules={[{ required: true, message: "Please enter your message" }]}
+  >
+    <textarea
+      rows={4}
+      placeholder="Enter your message..."
+      className="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none shadow-sm focus:shadow-md transition-all text-sm resize-none"
+    />
+  </Form.Item>
+</Form>
+
             </motion.div>
 
             {/* Contact Info Section */}
