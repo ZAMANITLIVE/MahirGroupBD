@@ -100,7 +100,7 @@ const AboutSection = ({ bgColor = "bg-gradient-to-br from-[#FFFBE9] via-[#FEF9E1
                 {data?.content?.experience?.year_experiences || 22}+
               </span>
               <span className="text-sm font-medium -mt-1">
-                Year Of Working Experience
+                Years of Industry Leadership
               </span>
             </motion.div>
           </motion.div>
@@ -165,7 +165,7 @@ const AboutSection = ({ bgColor = "bg-gradient-to-br from-[#FFFBE9] via-[#FEF9E1
                   {data?.content?.project?.num_projects}+
                 </h1>
                 <h4 className="description-1 text-[#333] font-normal">
-                  {i18n.t("Project Complete")}
+                  {i18n.t("Orders Fulfilled Globally")}
                 </h4>
               </div>
             </motion.div>
@@ -187,7 +187,7 @@ const AboutSection = ({ bgColor = "bg-gradient-to-br from-[#FFFBE9] via-[#FEF9E1
                   {data?.content?.experience?.year_experiences}+
                 </h1>
                 <h4 className="description-1 text-[#333] font-normal">
-                  {i18n.t("Years of Experiences")}
+                  {i18n.t("Years of Sustainable Growth")}
                 </h4>
               </div>
             </motion.div>
