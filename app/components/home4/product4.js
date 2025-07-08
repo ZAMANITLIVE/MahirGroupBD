@@ -83,7 +83,7 @@ const subheadingVariants = {
 };
 
 const Product4 = () => {
-  const [data] = useFetch(getPublicProjects, { limit: 6 });
+  const [data] = useFetch(getPublicProjects, { limit: 8 });
   const i18n = useI18n();
 
   return (
@@ -105,7 +105,7 @@ const Product4 = () => {
           </motion.div>
 
           <motion.div
-            className="xl:mt-14 lg:mt-10 md:mt-8 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-6 md:gap-5 sm:gap-4 gap-3"
+            className="xl:mt-14 lg:mt-10 md:mt-8 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:gap-6 md:gap-5 sm:gap-4 gap-3"
             variants={containerVariants}
           >
             {data?.docs?.map((item, index) => (
