@@ -1,153 +1,124 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-"use client";
-import React, { useState } from "react";
-import { useAction, useFetch } from "@/app/helper/hooks";
-import { getPublicJobs } from "@/app/helper/backend";
-import CommonBanner from "../../common/commonBanner";
-import CareerCard4 from "../../site/common/card/careerCard4";
-import { Empty, Form, Pagination } from "antd";
-import FormInput from "../../form/input";
-import { useI18n } from "@/app/contexts/i18n";
+/* eslint-disable react-hooks/exhaustive-deps */
+'use client'
+import React, { useEffect, useState } from 'react';
+import { Form } from 'antd';
+import { useParams } from 'next/navigation';
+import { useAction, useFetch } from '@/app/helper/hooks';
+import { createApplyJob, getPublicJobs, singlePDFUpload } from '@/app/helper/backend';
+import FormInput from '@/app/components/form/input';
+import UploadFileInput from '@/app/components/form/UploadFileInput';
+import CommonBanner from '../../common/commonBanner';
+import { columnFormatter } from '@/app/helper/utils';
 
-const CareersPage4 = () => {
-  const i18n = useI18n();
-  const [data] = useFetch(getPublicJobs);
+const CareersDetailsPage4 = () => {
   const [form] = Form.useForm();
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 4;
   const [loading, setLoading] = useState(false);
-  // Get paginated data
-  const paginatedData = data?.docs?.slice(
-    (currentPage - 1) * pageSize,
-    currentPage * pageSize
-  );
+  const [jobData, getJobData] = useFetch(getPublicJobs, {}, false);
+  const params = useParams();
+  const { _id } = params;
+
+  useEffect(() => {
+    getJobData({ _id: _id });
+  }, [_id]);
+
   const handleSubmit = async (value) => {
+    let resume = '';
+    let cover_latter = '';
+
+    if (value?.resume?.[0]?.originFileObj) {
+      const { data } = await singlePDFUpload({
+        pdf: value.resume[0].originFileObj,
+        file_name: "resume",
+      });
+      resume = data || "";
+    } else {
+      resume = value?.resume?.[0]?.url || "";
+    }
+
+    if (value?.cover_latter?.[0]?.originFileObj) {
+      const { data } = await singlePDFUpload({
+        pdf: value.cover_latter[0].originFileObj,
+        file_name: "cover_latter",
+      });
+      cover_latter = data || "";
+    } else {
+      cover_latter = value?.cover_latter?.[0]?.url || "";
+    }
+
+    const payload = {
+      ...value,
+      job: _id,
+      resume,
+      cover_latter,
+    };
+
     setLoading(true);
-    useAction(
-      sentMessage,
-      {
-        body: {
-          name: value.name,
-          email: value.email,
-          subject: value.subject,
-          message: value.text,
-        },
-      },
-      () => {
-        setLoading(false);
-        form.resetFields();
-      }
-    );
+    useAction(createApplyJob, { body: payload });
+    setLoading(false);
+    form.resetFields();
   };
 
   return (
-    <div className="">
-      <CommonBanner title="Careers" textTitle="text-primary" />
-      <div className="lg:py-[100px] md:py-20 sm:py-16 py-12 agency-container">
-        <div className="flex flex-col md:flex-row xl:gap-6 lg:gap-5 md:gap-4 sm:gap-3 gap-3">
-          <div className="!mx-auto w-full sm:w-2/3">
-            <div className=" grid grid-cols-1 md:grid-cols-2  xl:gap-6 lg:gap-5 md:gap-4 gap-3">
-              {paginatedData?.length > 0 ? (
-                paginatedData.map((item, index) => (
-                  <CareerCard4 data={item} key={index} />
-                ))
-              ) : (
-                <div className="flex justify-center mt-10 col-span-full">
-                  <Empty description="No Projects Found" />
+    <div>
+      <CommonBanner title="Career" link="/careers" subtitle={columnFormatter(jobData?.title)} />
+      <div className="2xl:py-[150px] xl:py-[120px] lg:py-[100px] md:py-20 sm:py-16 py-12 agency-container">
+        <div className="2xl:mt-[140px] xl:mt-[110px] lg:mt-[100px] md:mt-20 sm:mt-16 mt-12">
+          <h3 className="heading-2 !font-lexend text-primary">Apply to job</h3>
+          <Form className="theme5" layout="vertical" onFinish={handleSubmit} form={form}>
+            <div className="xl:p-10 lg:p-8 md:p-6 sm:p-5 p-4 xl:mt-8 lg:mt-7 md:mt-5 mt-4 border border-[#EBEDF9]/20 bg-[#ECFDF4] rounded-[10px] lg:rounded-[20px]">
+              <div>
+                <h4 className="heading-3 !font-lexend font-semibold text-primary lg:pb-6 md:pb-5 pb-4 border-b border-[#EBEDF9]/20">Personal Information</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:gap-8 lg:gap-6 gap-3 mt-5">
+                  <FormInput label="Full Name" name="full_name" placeholder="Enter your name" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                  <FormInput label="Email" name="email" isEmail type="email" placeholder="Enter your email" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                  <FormInput label="Address" name="address" placeholder="Enter your Address" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                  <FormInput label="Phone Number" name="phone" type="number" placeholder="Enter your Phone Number" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
                 </div>
-              )}
-            </div>
-          </div>
-          <div className="w-full  md:w-1/3">
-            <div className="bg-[#FEF9E1] xl:px-7 xl:py-8 lg:px-6 lg:py-7 sm:px-5 sm:py-6 p-4 lg:rounded-[20px] rounded-[10px] ">
-              <h2 className="heading-8 !font-lexend text-[#333333]">{i18n.t("Have Query")} ?</h2>
-              <Form
-                className="mt-6 theme5"
-                layout="vertical"
-                onFinish={handleSubmit}
-                form={form}
-              >
-                <div>
-                  <FormInput
-                    className="w-full p-2 sm:p-3 xl:p-4 theme4  rounded text-[#333] focus:outline-primary"
-                    label="Name"
-                    type="text"
-                    name="name"
-                    placeholder="Enter your name"
-                    required={true}
-                  />
-                </div>
-                <div className="">
-                  <FormInput
-                    className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary"
-                    label="Subject"
-                    type="text"
-                    name="subject"
-                    placeholder="Enter Your Subject"
-                    required={true}
-                  />
-                </div>
-                <div className="">
-                  <FormInput
-                    className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary"
-                    label="Email"
-                    type="email"
-                    isEmail={true}
-                    name="email"
-                    placeholder="Enter your email"
-                    required={true}
-                  />
-                </div>
-                <div className="">
-                  <FormInput
-                    textArea={true}
-                    rows={3}
-                    className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-white focus:outline-primary"
-                    label="Message"
-                    type="text"
-                    name="text"
-                    placeholder="Enter your message ..."
-                    required={true}
-                  />
-                </div>
-                <div className="text-center -mt-5">
-                  <button
-                    type="submit"
-                    className="w-full common-btn mt-6 bg-primary text-white rounded-[10px]"
-                  >
-                    {loading ? "Sending..." : "Send Message"}
-                  </button>
-                </div>
-              </Form>
-            </div>
-          </div>
-        </div>
+              </div>
 
-        {data?.docs?.length > pageSize && (
-          <div className="flex justify-center mt-10 theme4Ant">
-            <Pagination
-              current={currentPage}
-              pageSize={pageSize}
-              total={data.docs.length}
-              onChange={(page) => setCurrentPage(page)}
-              showSizeChanger={false}
-              className="text-primary"
-              itemRender={(page, type, originalElement) => {
-                if (type === "page") {
-                  return (
-                    <a className="!text-primary hover:!text-primary font-medium">
-                      {page}
-                    </a>
-                  );
-                }
-                return originalElement;
-              }}
-            />
-          </div>
-        )}
+              <div className="xl:mt-5 lg:mt-4 md:mt-4 mt-2">
+                <h4 className="heading-3 !font-lexend font-semibold text-primary lg:pb-6 md:pb-5 pb-4 border-b border-[#EBEDF9]/20">Online Profile</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:gap-8 lg:gap-6 gap-3 mt-5">
+                  <FormInput label="Linkedin Profile" name="linkedin" placeholder="Enter your Linkedin Profile Link" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                  {/* <FormInput label="GitHub" name="github" placeholder="Enter your GitHub Profile" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" /> */}
+                </div>
+              </div>
+
+              <div className="xl:mt-5 lg:mt-4 md:mt-4 mt-2">
+                <h4 className="heading-3 !font-lexend font-semibold text-primary lg:pb-6 md:pb-5 pb-4 border-b border-[#EBEDF9]/20">Experience</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:gap-8 lg:gap-6 gap-3 mt-5">
+                  <FormInput label="Year of Experience" type="number" name="experience" placeholder="Example: 3, 4, 5" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                  <FormInput label="Company Name" name="companyName" placeholder="Enter your Previous Company Name" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                </div>
+              </div>
+
+              <div className="xl:mt-5 lg:mt-4 md:mt-4 mt-2">
+                <h4 className="heading-3 !font-lexend font-semibold text-primary lg:pb-6 md:pb-5 pb-4 border-b border-[#EBEDF9]/20">Educational Information</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:gap-8 lg:gap-6 gap-3 mt-5">
+                  <FormInput label="Highest Education Level" name="education" placeholder="Example: B.Sc or M.Sc or Phd" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                  <FormInput label="University/College Name" name="university" placeholder="Enter University/College Name" required className="w-full p-2 sm:p-3 xl:p-4 theme4 rounded text-[#333] focus:outline-primary" />
+                </div>
+              </div>
+
+              <div className="xl:mt-5 lg:mt-4 md:mt-4 mt-2">
+                <h4 className="heading-3 !font-lexend font-semibold text-primary lg:pb-6 md:pb-5 pb-4 border-b border-[#EBEDF9]/20">Additional Information</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:gap-8 lg:gap-6 gap-3 mt-5">
+                  <div className="file-upload-theme4">
+                    <UploadFileInput pdf name="resume" label="Resume" placeholder="Upload your Resume" required />
+                  </div>
+                  <div className="file-upload-theme4">
+                    <UploadFileInput pdf name="cover_latter" label="Cover Letter" placeholder="Upload your Cover Letter" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button className="xl:mt-8 lg:mt-7 md:mt-6 sm:mt-5 mt-4 common-btn bg-primary text-white !rounded">Submit</button>
+          </Form>
+        </div>
       </div>
     </div>
   );
 };
 
-export default CareersPage4;
+export default CareersDetailsPage4;
