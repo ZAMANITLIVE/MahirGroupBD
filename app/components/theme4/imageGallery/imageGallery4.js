@@ -1,62 +1,72 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import {
-  getAllPublicServices,
-  GetPublicServiceCategories,
-} from "@/app/helper/backend";
-import { useFetch } from "@/app/helper/hooks";
-import { columnFormatter } from "@/app/helper/utils";
-import { Empty, Image } from "antd";
-import React, { useEffect, useState } from "react";
+
+import React, { useState } from "react";
+import { Image, Empty } from "antd";
 import CommonBanner from "../../common/commonBanner";
 
+const categoryTabs = [
+  { id: "journey", name: "Our Journey" },
+  { id: "factories", name: "Factories" },
+  { id: "certifications", name: "Certifications" },
+  { id: "sustainability", name: "Sustainability" },
+  { id: "companies", name: "Our Companies" },
+];
+
+const imagesByCategory = {
+  journey: [
+    // Add image URLs here
+    "",
+    "",
+  ],
+  factories: [
+    // Add image URLs here
+    "",
+    "",
+  ],
+  certifications: [
+    // Add image URLs here
+    "",
+    "",
+  ],
+  sustainability: [
+    // Add image URLs here
+    "",
+    "",
+  ],
+  companies: [
+    // Add image URLs here
+    "",
+    "",
+  ],
+};
+
 const ImageGalleryPage4 = () => {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("journey");
   const [previewVisible, setPreviewVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [services, getServices] = useFetch(getAllPublicServices, {
-    fields: "banner_image",
-  });
-  const [categories] = useFetch(GetPublicServiceCategories);
-  const activeImages = services?.docs?.map((item) => item?.banner_image) || [];
 
-  useEffect(() => {
-    getServices({});
-  }, []);
-
-  const handleCategoryChange = (categoryId) => {
-    setActiveTab(categoryId || "All");
-    getServices(categoryId ? { category: categoryId } : {});
-  };
+  const activeImages = imagesByCategory[activeTab] || [];
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-x-hidden bg-white">
       <CommonBanner title="Image Gallery" textTitle="text-primary" />
 
       <div className="lg:py-[100px] md:py-20 sm:py-16 py-12 agency-container">
-        
-        {/* Tabs */}
+        <h3 className="text-xl font-semibold mb-4 text-center">Gallery Categories</h3>
         <div className="overflow-x-auto w-full pb-5 scrollbar-thin">
           <div className="flex items-center justify-start lg:justify-center gap-3 md:gap-4 lg:gap-6 w-max min-w-full">
-            <button
-              onClick={() => handleCategoryChange(undefined)}
-              className={`common-btn border border-primary whitespace-pre px-4 py-2 ${
-                activeTab === "All" ? "bg-primary text-black" : "text-[#000000]"
-              }`}
-            >
-              Show All
-            </button>
-            {categories?.docs?.map((item) => (
+            {categoryTabs.map((tab) => (
               <button
-                key={item?._id}
-                onClick={() => handleCategoryChange(item?._id)}
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
                 className={`common-btn border border-primary whitespace-pre px-4 py-2 ${
-                  activeTab === item?._id
-                    ? "bg-primary text-black"
-                    : "text-[#000000]"
+                  activeTab === tab.id
+                    ? "bg-primary text-white"
+                    : "text-black"
                 }`}
               >
-                {columnFormatter(item?.name)}
+                {tab.name}
               </button>
             ))}
           </div>
@@ -64,7 +74,7 @@ const ImageGalleryPage4 = () => {
 
         {/* Image Grid */}
         <div className="2xl:mt-[60px] xl:mt-14 lg:mt-10 md:mt-8 sm:mt-7 mt-6 grid grid-cols-2 sm:grid-cols-3 xl:gap-6 lg:gap-5 md:gap-4 sm:gap-3 gap-2">
-          {activeImages?.length > 0 ? (
+          {activeImages.length > 0 ? (
             activeImages.map((image, index) => (
               <div
                 key={index}
@@ -74,16 +84,14 @@ const ImageGalleryPage4 = () => {
                   setPreviewVisible(true);
                 }}
               >
-                {image && (
-                  <Image
-                    src={image}
-                    alt={`Gallery ${index}`}
-                    preview={false}
-                    className="w-full h-full object-cover"
-                    width="100%"
-                    height="100%"
-                  />
-                )}
+                <Image
+                  src={image}
+                  alt={`${activeTab}-${index}`}
+                  preview={false}
+                  className="w-full h-full object-cover"
+                  width="100%"
+                  height="100%"
+                />
               </div>
             ))
           ) : (
@@ -91,7 +99,7 @@ const ImageGalleryPage4 = () => {
           )}
         </div>
 
-        {/* Preview Group (hidden but functional) */}
+        {/* Image Preview Modal */}
         {previewVisible && (
           <div className="hidden">
             <Image.PreviewGroup
@@ -106,7 +114,7 @@ const ImageGalleryPage4 = () => {
                 <Image
                   key={index}
                   src={image}
-                  alt={`Gallery ${index}`}
+                  alt={`${activeTab}-${index}`}
                   width={800}
                   height={600}
                 />
