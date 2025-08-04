@@ -12,6 +12,14 @@ import { useUser } from "@/app/contexts/user";
 import { useI18n } from "@/app/contexts/i18n";
 import { GrLanguage } from "react-icons/gr";
 import HeaderBar from "@/app/(dashboard)/components/HeaderBar";
+import { getPublicProjects } from "@/app/helper/backend";
+
+const data = await getPublicProjects({ limit: 1000 });
+
+const productNavItems = data?.docs?.map((product) => ({
+  key: `/product/${product.slug || product._id}`,
+  label: product.name,
+})) || [];
 
 const Navbar = ({
   bgColor = "bg-transparent",
@@ -114,46 +122,13 @@ const Navbar = ({
     },
 
     {
-      key: "/product",
-      icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
-      label: "Products",
-      children: [
-        {
-          key: "/product/twill-tape",
-          label: "Twill Tape",
-          
-        },
-        {
-          key: "/product/drawstring",
-          label: "Drawstring",
-        },
-        {
-          key: "/product/elastic",
-          label: "Elastic",
-        },
-        {
-          key: "/product/poly",
-          label: "Poly",
-        },
-        {
-          key: "/product/gum-tape",
-          label: "Gum Tape",
-        },
-        {
-          key: "/product/carton",
-          label: "Carton",
-        },
-        {
-          key: "/product/zipper",
-          label: "Zipper",
-        },
-        {
-          key: "/product/metal-button",
-          label: "Metal Button",
-        },
+    key: "/product",
+    icon: <FaRegCircle className="!bg-primary !text-primary rounded-full" />,
+    label: "Products",
+    children: productNavItems,
+  },
 
-      ],
-    },
+    
 
 
     {
