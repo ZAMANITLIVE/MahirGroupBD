@@ -14,18 +14,12 @@ import { GrLanguage } from "react-icons/gr";
 import HeaderBar from "@/app/(dashboard)/components/HeaderBar";
 import { getPublicProjects } from "@/app/helper/backend";
 
-const [productNavItems, setProductNavItems] = useState([]);
+const data = await getPublicProjects({ limit: 1000 });
 
-useEffect(() => {
-  getPublicProjects({ limit: 15 }).then((res) => {
-    const items = res?.docs?.map((product) => ({
-      key: `/product/${product.slug || product._id}`,
-      label: product.name,
-    }));
-    setProductNavItems(items || []);
-  });
-}, []);
-
+const productNavItems = data?.docs?.map((product) => ({
+  key: `/product/${product.slug || product._id}`,
+  label: product.name,
+})) || [];
 
 const Navbar = ({
   bgColor = "bg-transparent",
@@ -127,12 +121,49 @@ const Navbar = ({
       ],
     },
 
-   {
-    key: "/product",
-    icon: <FaRegCircle className="!bg-primary !text-primary rounded-full" />,
-    label: "Products",
-    children: productNavItems,
-  },
+    {
+      key: "/product",
+      icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
+      label: "Products",
+      children: [
+        {
+          key: "/product/twill-tape",
+          label: "Twill Tape",
+          
+        },
+        {
+          key: "/product/drawstring",
+          label: "Drawstring",
+        },
+        {
+          key: "/product/elastic",
+          label: "Elastic",
+        },
+        {
+          key: "/product/poly",
+          label: "Poly",
+        },
+        {
+          key: "/product/gum-tape",
+          label: "Gum Tape",
+        },
+        {
+          key: "/product/carton",
+          label: "Carton",
+        },
+        {
+          key: "/product/681f2838acbc31093515b0c3",
+          label: "Zipper",
+        },
+        {
+          key: "/product/681f286aacbc31093515b0d7",
+          label: "Metal Button",
+        },
+
+      ],
+    },
+
+
     {
       key: "/imageGallery",
       icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
