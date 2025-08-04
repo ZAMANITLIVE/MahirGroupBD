@@ -14,12 +14,18 @@ import { GrLanguage } from "react-icons/gr";
 import HeaderBar from "@/app/(dashboard)/components/HeaderBar";
 import { getPublicProjects } from "@/app/helper/backend";
 
-const data = await getPublicProjects({ limit: 1000 });
+const [productNavItems, setProductNavItems] = useState([]);
 
-const productNavItems = data?.docs?.map((product) => ({
-  key: `/product/${product.slug || product._id}`,
-  label: product.name,
-})) || [];
+useEffect(() => {
+  getPublicProjects({ limit: 15 }).then((res) => {
+    const items = res?.docs?.map((product) => ({
+      key: `/product/${product.slug || product._id}`,
+      label: product.name,
+    }));
+    setProductNavItems(items || []);
+  });
+}, []);
+
 
 const Navbar = ({
   bgColor = "bg-transparent",
@@ -121,16 +127,12 @@ const Navbar = ({
       ],
     },
 
-    {
+   {
     key: "/product",
     icon: <FaRegCircle className="!bg-primary !text-primary rounded-full" />,
     label: "Products",
     children: productNavItems,
   },
-
-    
-
-
     {
       key: "/imageGallery",
       icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
