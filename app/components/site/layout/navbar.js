@@ -114,41 +114,41 @@ const Navbar = ({
     },
 
     {
-      key: "/project",
+      key: "/product",
       icon: <FaRegCircle className=" !bg-primary !text-primary rounded-full" />,
       label: "Products",
       children: [
         {
-          key: "/twill-tape",
+          key: "/product/twill-tape",
           label: "Twill Tape",
           
         },
         {
-          key: "/drawstring",
+          key: "/product/drawstring",
           label: "Drawstring",
         },
         {
-          key: "/elastic",
+          key: "/product/elastic",
           label: "Elastic",
         },
         {
-          key: "/poly",
+          key: "/product/poly",
           label: "Poly",
         },
         {
-          key: "/gum-tape",
+          key: "/product/gum-tape",
           label: "Gum Tape",
         },
         {
-          key: "/carton",
+          key: "/product/carton",
           label: "Carton",
         },
         {
-          key: "/zipper",
+          key: "/product/zipper",
           label: "Zipper",
         },
         {
-          key: "/metal-button",
+          key: "/product/metal-button",
           label: "Metal Button",
         },
 

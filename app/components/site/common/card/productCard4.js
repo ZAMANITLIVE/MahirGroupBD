@@ -30,7 +30,7 @@ const ProductCard4 = ({ data }) => {
             </p> 
             */}
 
-            <Link href={`/project/${data?._id}`} className="flex items-center justify-center gap-2 common-btn bg-[#F4A434] group-hover:bg-[#000000] border border-primary/40 transform duration-300">
+            <Link href={`/product/${data?._id}`} className="flex items-center justify-center gap-2 common-btn bg-[#F4A434] group-hover:bg-[#000000] border border-primary/40 transform duration-300">
                <p className="description-1 transform text-white">{i18n.t("View Details")}</p>
                <FaArrowRightLong className="text-white transform duration-300" />
             </Link>
