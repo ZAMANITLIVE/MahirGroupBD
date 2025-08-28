@@ -12,14 +12,6 @@ import { useUser } from "@/app/contexts/user";
 import { useI18n } from "@/app/contexts/i18n";
 import { GrLanguage } from "react-icons/gr";
 import HeaderBar from "@/app/(dashboard)/components/HeaderBar";
-import { getPublicProjects } from "@/app/helper/backend";
-
-const data = await getPublicProjects({ limit: 1000 });
-
-const productNavItems = data?.docs?.map((product) => ({
-  key: `/product/${product.slug || product._id}`,
-  label: product.name,
-})) || [];
 
 const Navbar = ({
   bgColor = "bg-transparent",
@@ -152,11 +144,11 @@ const Navbar = ({
           label: "Carton",
         },
         {
-          key: "/product/681f2838acbc31093515b0c3",
+          key: "/product/zipper",
           label: "Zipper",
         },
         {
-          key: "/product/681f286aacbc31093515b0d7",
+          key: "/product/metal-button",
           label: "Metal Button",
         },
 
