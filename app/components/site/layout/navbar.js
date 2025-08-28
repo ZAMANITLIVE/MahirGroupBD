@@ -119,36 +119,36 @@ const Navbar = ({
       label: "Products",
       children: [
         {
-          key: "/product/twill-tape",
+          key: "/product/681f15c6acbc31093515ae58",
           label: "Twill Tape",
           
         },
         {
-          key: "/product/drawstring",
+          key: "/product/681f164eacbc31093515ae87",
           label: "Drawstring",
         },
         {
-          key: "/product/elastic",
+          key: "/product/681f167aacbc31093515ae9b",
           label: "Elastic",
         },
         {
-          key: "/product/poly",
+          key: "/product/681f2799acbc31093515b087",
           label: "Poly",
         },
         {
-          key: "/product/gum-tape",
+          key: "/product/681f27d0acbc31093515b09b",
           label: "Gum Tape",
         },
         {
-          key: "/product/carton",
+          key: "/product/681f280dacbc31093515b0af",
           label: "Carton",
         },
         {
-          key: "/product/zipper",
+          key: "/product/681f2838acbc31093515b0c3",
           label: "Zipper",
         },
         {
-          key: "/product/metal-button",
+          key: "/product/681f286aacbc31093515b0d7",
           label: "Metal Button",
         },
 
